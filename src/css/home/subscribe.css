@@ -1,0 +1,106 @@
+.homeWide {
+  --subscribeWideWidth: calc(var(--topboxWidth) * 0.4);
+}
+
+.homeWide .subscribeFlex {
+  margin-bottom: calc(var(--subscribeWideWidth)*0.9);
+  width: 100vw;
+  max-width: 100%;
+}
+
+.homeWide .subscribeBox {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  left: calc(var(--topboxWidth) * 0.27);
+
+  width: calc(var(--subscribeWideWidth)*0.9);
+  margin-top: calc(var(--subscribeWideWidth) * 0.125);
+  padding-top: calc(var(--subscribeWideWidth) * 0.075);
+  padding-bottom: calc(var(--subscribeWideWidth) * 0.075);
+  padding-left: calc(var(--subscribeWideWidth) * 0.33);
+  padding-right: calc(var(--subscribeWideWidth) * 0.12);
+
+  background-color: var(--lightblue);
+  border-radius: calc(var(--subscribeWideWidth) * 0.05);
+  filter: drop-shadow(
+    0px 0px calc(var(--subscribeWideWidth) / 60) var(--shadowgray)
+  );
+}
+
+.homeWide .subscribeBox .stayTuned {
+  font-family: "SF-Pro-Display-Bold";
+  color: black;
+  font-size: calc(var(--subscribeWideWidth) / 12);
+  margin-bottom: calc(var(--subscribeWideWidth) / 30);
+}
+
+.homeWide .subscribeBox .wantToReceiveUpdates {
+  font-family: "SF-Pro-Display-Regular";
+  color: black;
+  font-size: calc(var(--subscribeWideWidth) / 24);
+  margin-bottom: calc(var(--subscribeWideWidth) / 25);
+}
+
+.homeWide .subscribeBox .inputFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: calc(var(--subscribeWideWidth) / 17);
+}
+
+.homeWide .subscribeBox .inputName,
+.homeWide .subscribeBox .inputEmail {
+  border: 0px;
+  filter: drop-shadow(
+    0px 0px calc(var(--subscribeWideWidth) / 120) var(--shadowgray)
+  );
+  outline: none;
+
+  height: calc(var(--subscribeWideWidth) / 12);
+  border-radius: calc(var(--subscribeWideWidth) * 0.01);
+  padding-left: calc(var(--subscribeWideWidth) / 40);
+  padding-right: calc(var(--subscribeWideWidth) / 40);
+
+  font-family: "SF-Pro-Display-Regular";
+  color: black;
+  font-size: calc(var(--subscribeWideWidth) / 24);
+}
+
+.homeWide .subscribeBox .subscribeButton {
+  height: calc(var(--subscribeWideWidth) / 12);
+  width: calc(var(--subscribeWideWidth) * 0.25);
+  border-radius: calc(var(--subscribeWideWidth) * 0.01);
+
+  background-color: var(--verydeepblue);
+  border: none;
+  filter: drop-shadow(
+    0px 0px calc(var(--subscribeWideWidth) / 120) var(--shadowgray)
+  );
+  outline: none;
+
+  font-family: "SF-Pro-Display-Regular";
+  color: white;
+  font-size: calc(var(--subscribeWideWidth) / 24);
+}
+
+.homeWide .subscribeBox .subscribeButton:hover {
+  background-color: var(--hoverdeepblue);
+}
+
+.homeWide .decor {
+  position: absolute;
+  top: calc(var(--topboxWidth) * 0.085);
+  left: calc(var(--topboxWidth) * 0.175);
+
+  background-color: var(--blue);
+  filter: drop-shadow(
+    0px 0px calc(var(--subscribeWideWidth) / 120) var(--shadowgray)
+  );
+
+  height: calc(var(--subscribeWideWidth) * 0.45);
+  aspect-ratio: 1;
+  border-radius: calc(var(--subscribeWideWidth) * 0.025);
+  z-index: 9;
+}

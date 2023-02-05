@@ -20,6 +20,8 @@
 }
 
 :root {
+  --hoverdeepblue: #a9d1ff;
+  --verydeepblue: #b8d6f9;
   --deepblue: #bedcff;
   --blue: #d8eaff;
   --lightblue: #f2f8ff;
@@ -59,6 +61,7 @@
 @import "./css/bottombar/bottombar.css";
 @import "./css/home/topBox.css";
 @import "./css/home/thingsDid.css";
+@import "./css/home/subscribe.css";
 @import "./css/list/list.css";
 @import "./css/list/listitem.css";
 @import "./css/posttemp/posttemp.css";
