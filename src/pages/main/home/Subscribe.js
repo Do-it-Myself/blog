@@ -11,6 +11,7 @@ export default function Subscribe() {
     }
     else if (email.length === 0){
       alert("Email has left Blank!");
+      
     }
     else {
       const url = "https://kfjrgwgp4a.execute-api.eu-west-2.amazonaws.com/dev"
