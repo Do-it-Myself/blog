@@ -14,7 +14,7 @@ export default function Subscribe() {
       
     }
     else {
-      const url = "https://kfjrgwgp4a.execute-api.eu-west-2.amazonaws.com/dev"
+      const url = "" //https://kfjrgwgp4a.execute-api.eu-west-2.amazonaws.com/dev
       axios.post(url, {action:"subscribe", name:name, email:email}).then((response) => console.log(response).catch((error)=>console.log(error)))
       setName(""); 
       setEmail("");
