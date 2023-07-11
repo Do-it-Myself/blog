@@ -2,8 +2,20 @@
   --subscribeWideWidth: calc(var(--topboxWidth) * 0.4);
 }
 
+.homeNarrow {
+  --subscribeWideWidth: calc(var(--topboxWidth) * 0.4);
+  --subscribeNarrowWidth: calc(var(--topboxWidth) * 0.77);
+}
+
 .homeWide .subscribeFlex {
-  margin-bottom: calc(var(--subscribeWideWidth)*0.9);
+  margin-bottom: calc(var(--subscribeWideWidth) * 0.8);
+  width: 100vw;
+  max-width: 100%;
+}
+
+.homeNarrow .subscribeFlex {
+  margin-top: calc(var(--subscribeNarrowWidth) * 0.05);
+  margin-bottom: calc(var(--subscribeNarrowWidth) * 0.85);
   width: 100vw;
   max-width: 100%;
 }
@@ -15,7 +27,7 @@
   position: absolute;
   left: calc(var(--topboxWidth) * 0.27);
 
-  width: calc(var(--subscribeWideWidth)*0.9);
+  width: calc(var(--subscribeWideWidth) * 0.9);
   margin-top: calc(var(--subscribeWideWidth) * 0.125);
   padding-top: calc(var(--subscribeWideWidth) * 0.075);
   padding-bottom: calc(var(--subscribeWideWidth) * 0.075);
@@ -29,11 +41,39 @@
   );
 }
 
+.homeNarrow .subscribeBox {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  left: calc(var(--topboxWidth) * 0.17);
+
+  width: calc(var(--subscribeNarrowWidth) * 0.68);
+  margin-top: calc(var(--subscribeNarrowWidth) * 0.125);
+  padding-top: calc(var(--subscribeNarrowWidth) * 0.085);
+  padding-bottom: calc(var(--subscribeNarrowWidth) * 0.085);
+  padding-left: calc(var(--subscribeNarrowWidth) * 0.13);
+  padding-right: calc(var(--subscribeNarrowWidth) * 0.13);
+
+  background-color: var(--lightblue);
+  border-radius: calc(var(--subscribeNarrowWidth) * 0.05);
+  filter: drop-shadow(
+    0px 0px calc(var(--subscribeNarrowWidth) / 60) var(--shadowgray)
+  );
+}
+
 .homeWide .subscribeBox .stayTuned {
   font-family: "SF-Pro-Display-Bold";
   color: black;
   font-size: calc(var(--subscribeWideWidth) / 12);
   margin-bottom: calc(var(--subscribeWideWidth) / 30);
+}
+
+.homeNarrow .subscribeBox .stayTuned {
+  font-family: "SF-Pro-Display-Bold";
+  color: black;
+  font-size: calc(var(--subscribeNarrowWidth) / 12);
+  margin-bottom: calc(var(--subscribeNarrowWidth) / 30);
 }
 
 .homeWide .subscribeBox .wantToReceiveUpdates {
@@ -43,6 +83,13 @@
   margin-bottom: calc(var(--subscribeWideWidth) / 25);
 }
 
+.homeNarrow .subscribeBox .wantToReceiveUpdates {
+  font-family: "SF-Pro-Display-Regular";
+  color: black;
+  font-size: calc(var(--subscribeNarrowWidth) / 24);
+  margin-bottom: calc(var(--subscribeNarrowWidth) / 25);
+}
+
 .homeWide .subscribeBox .inputFlex {
   display: flex;
   flex-direction: row;
@@ -50,8 +97,15 @@
   margin-bottom: calc(var(--subscribeWideWidth) / 17);
 }
 
+.homeNarrow .subscribeBox .firstRowFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: calc(var(--subscribeNarrowWidth) / 25);
+}
+
 .homeWide .subscribeBox .inputName,
-.homeWide .subscribeBox .inputEmail {
+.homeWide .subscribeBox .inputEmail{
   border: 0px;
   filter: drop-shadow(
     0px 0px calc(var(--subscribeWideWidth) / 120) var(--shadowgray)
@@ -66,6 +120,24 @@
   font-family: "SF-Pro-Display-Regular";
   color: black;
   font-size: calc(var(--subscribeWideWidth) / 24);
+}
+
+.homeNarrow .subscribeBox .inputName,
+.homeNarrow .subscribeBox .inputEmail {
+  border: 0px;
+  filter: drop-shadow(
+    0px 0px calc(var(--subscribeNarrowWidth) / 120) var(--shadowgray)
+  );
+  outline: none;
+
+  height: calc(var(--subscribeNarrowWidth) / 12);
+  border-radius: calc(var(--subscribeNarrowWidth) * 0.01);
+  padding-left: calc(var(--subscribeNarrowWidth) / 40);
+  padding-right: calc(var(--subscribeNarrowWidth) / 40);
+
+  font-family: "SF-Pro-Display-Regular";
+  color: black;
+  font-size: calc(var(--subscribeNarrowWidth) / 24);
 }
 
 .homeWide .subscribeBox .subscribeButton {
@@ -85,11 +157,30 @@
   font-size: calc(var(--subscribeWideWidth) / 24);
 }
 
-.homeWide .subscribeBox .subscribeButton:hover {
+.homeNarrow .subscribeBox .subscribeButton {
+  height: calc(var(--subscribeNarrowWidth) / 12);
+  width: calc(var(--subscribeNarrowWidth) * 0.35);
+  border-radius: calc(var(--subscribeNarrowWidth) * 0.01);
+
+  background-color: var(--verydeepblue);
+  border: none;
+  filter: drop-shadow(
+    0px 0px calc(var(--subscribeNarrowWidth) / 120) var(--shadowgray)
+  );
+  outline: none;
+
+  font-family: "SF-Pro-Display-Regular";
+  color: white;
+  font-size: calc(var(--subscribeNarrowWidth) / 24);
+}
+
+
+.homeWide .subscribeBox .subscribeButton:hover,
+.homeNarrow .subscribeBox .subscribeButton:hover {
   background-color: var(--hoverdeepblue);
 }
 
-.homeWide .decor {
+.homeWide .decor{
   position: absolute;
   top: calc(var(--topboxWidth) * 0.085);
   left: calc(var(--topboxWidth) * 0.175);
@@ -103,4 +194,20 @@
   aspect-ratio: 1;
   border-radius: calc(var(--subscribeWideWidth) * 0.025);
   z-index: 9;
+}
+
+.homeNarrow .decor {
+  position: absolute;
+  top: calc(var(--topboxWidth) * 0.04);
+  left: calc(var(--topboxWidth) * 0.105);
+
+  background-color: var(--blue);
+  filter: drop-shadow(
+    0px 0px calc(var(--subscribeNarrowWidth) / 120) var(--shadowgray)
+  );
+
+  height: calc(var(--subscribeNarrowWidth) * 0.5);
+  aspect-ratio: 1;
+  border-radius: calc(var(--subscribeNarrowWidth) * 0.04);
+  z-index: -1;
 }

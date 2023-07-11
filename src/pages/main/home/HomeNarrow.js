@@ -2,6 +2,7 @@ import React from "react";
 import FlatList from "flatlist-react";
 
 import Post from "./Post";
+import SubscribeNarrow from "./SubscribeNarrow";
 
 const renderPost = (content) => {
   return <Post key={content["id"]} content={content} />;
@@ -10,8 +11,13 @@ const renderPost = (content) => {
 export default function Home() {
   let postJSON = require("../../posts/Posts.json");
   let reversedJSON = [...postJSON].reverse();
-  const postList = [reversedJSON[6], reversedJSON[3], reversedJSON[4], reversedJSON[2]];
-  
+  const postList = [
+    reversedJSON[6],
+    reversedJSON[3],
+    reversedJSON[4],
+    reversedJSON[2],
+  ];
+
   return (
     <div>
       <div className="homeNarrow">
@@ -46,6 +52,7 @@ export default function Home() {
                 <FlatList list={postList} renderItem={renderPost} />
               </div>
             </div>
+            <SubscribeNarrow />
           </div>
         </div>
       </div>

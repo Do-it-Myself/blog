@@ -2,7 +2,7 @@ import React from "react";
 import FlatList from "flatlist-react";
 
 import Post from "./Post";
-import Subscribe from "./Subscribe";
+import SubscribeWide from "./SubscribeWide";
 
 const renderPost = (content) => {
   return <Post key={content["id"]} content={content} />;
@@ -52,7 +52,7 @@ export default function Home() {
                 <FlatList list={postList} renderItem={renderPost} />
               </div>
             </div>
-            <Subscribe />
+            <SubscribeWide />
           </div>
         </div>
       </div>
