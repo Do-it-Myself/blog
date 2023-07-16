@@ -1,4 +1,10 @@
-import React, { lazy, Suspense, cloneElement } from "react";
+import React, {
+  lazy,
+  Suspense,
+  cloneElement,
+  createContext,
+  useState,
+} from "react";
 import FlatList from "flatlist-react";
 
 import NavBarWide from "./pages/main/navbar/NavBarWide";
@@ -20,17 +26,21 @@ let postJSON = require("./pages/posts/Posts.json");
 let routeList = [];
 
 for (let i = 0; i < postJSON.length; i++) {
-  const Page = lazy(() => import("./pages/posts" + postJSON[i]["dir"] + "/Page"));
-  const i_nxt = (i === postJSON.length - 1 ? 0 : i + 1);
-  const i_nxtnxt = (i_nxt === postJSON.length - 1 ? 0 : i_nxt + 1);
+  const Page = lazy(() =>
+    import("./pages/posts" + postJSON[i]["dir"] + "/Page")
+  );
+  const i_nxt = i === postJSON.length - 1 ? 0 : i + 1;
+  const i_nxtnxt = i_nxt === postJSON.length - 1 ? 0 : i_nxt + 1;
 
   const object = {
-    page: <Page content={postJSON[i]} next={[i_nxt, i_nxtnxt]}/>,
+    page: <Page content={postJSON[i]} next={[i_nxt, i_nxtnxt]} />,
     path: postJSON[i]["dir"],
     id: postJSON[i]["id"],
   };
   routeList.push(object);
 }
+
+export const ModalContext = createContext();
 
 export default function App() {
   const homeIsNarrow = useMediaQuery({ query: "(max-aspect-ratio: 4/5)" });
@@ -39,10 +49,12 @@ export default function App() {
   const renderRoute = (post) => {
     return (
       <Route key={post.id} exact path={post.path}>
-        {cloneElement(post.page, {homeIsNarrow: homeIsNarrow})}
+        {cloneElement(post.page, { homeIsNarrow: homeIsNarrow })}
       </Route>
     );
   };
+
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <Router basename="/blog">
@@ -51,8 +63,10 @@ export default function App() {
         {navBarIsNarrow && <NavBarNarrow />}
         <Switch>
           <Route exact path="/">
-            {!homeIsNarrow && <HomeWide />}
-            {homeIsNarrow && <HomeNarrow />}
+            <ModalContext.Provider value={{ modalOpen, setModalOpen }}>
+              {!homeIsNarrow && <HomeWide />}
+              {homeIsNarrow && <HomeNarrow />}
+            </ModalContext.Provider>
           </Route>
           <Route exact path="/hardware">
             {!homeIsNarrow && <HardwareWide />}
@@ -62,7 +76,7 @@ export default function App() {
             {!homeIsNarrow && <SoftwareWide />}
             {homeIsNarrow && <SoftwareNarrow />}
           </Route>
-          <Suspense fallback={<Loading homeIsNarrow={homeIsNarrow}/>}>
+          <Suspense fallback={<Loading homeIsNarrow={homeIsNarrow} />}>
             <FlatList list={routeList} renderItem={renderRoute} />
           </Suspense>
         </Switch>

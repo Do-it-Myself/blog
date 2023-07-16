@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
+import { ModalContext } from "../../../App";
 
 export default function Subscribe() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+
+  const modalContextUser = useContext(ModalContext);
 
   const handleSubmit = () => {
     if (name.length === 0) {
@@ -11,12 +14,17 @@ export default function Subscribe() {
     } else if (email.length === 0) {
       alert("Email has left Blank!");
     } else {
-      const url = "https://kfjrgwgp4a.execute-api.eu-west-2.amazonaws.com/dev";
+      const url = ""; //"https://kfjrgwgp4a.execute-api.eu-west-2.amazonaws.com/dev";
       axios
         .post(url, { action: "subscribe", name: name, email: email })
-        .then((response) =>
-          console.log(response).catch((error) => console.log(error))
-        );
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      modalContextUser.setModalOpen(true);
       setName("");
       setEmail("");
     }

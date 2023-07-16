@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import FlatList from "flatlist-react";
 
 import Post from "./Post";
 import SubscribeWide from "./SubscribeWide";
+import Modal from "./Modal";
 
 const renderPost = (content) => {
   return <Post key={content["id"]} content={content} />;
@@ -20,6 +21,7 @@ export default function Home() {
 
   return (
     <div>
+      <Modal />
       <div className="homeWide">
         <div className="topbox">
           <div className="flexbox">

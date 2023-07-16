@@ -3,6 +3,7 @@ import FlatList from "flatlist-react";
 
 import Post from "./Post";
 import SubscribeNarrow from "./SubscribeNarrow";
+import Modal from "./Modal";
 
 const renderPost = (content) => {
   return <Post key={content["id"]} content={content} />;
@@ -20,6 +21,7 @@ export default function Home() {
 
   return (
     <div>
+      <Modal />
       <div className="homeNarrow">
         <div className="topbox">
           <div className="flexbox">
