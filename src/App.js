@@ -9,8 +9,7 @@ import FlatList from "flatlist-react";
 
 import NavBarWide from "./pages/main/navbar/NavBarWide";
 import NavBarNarrow from "./pages/main/navbar/NavBarNarrow";
-import HomeWide from "./pages/main/home/HomeWide";
-import HomeNarrow from "./pages/main/home/HomeNarrow";
+import HomeWithContext from "./pages/main/home/HomeWithContext";
 import HardwareWide from "./pages/main/hardware/HardwareWide";
 import HardwareNarrow from "./pages/main/hardware/HardwareNarrow";
 import SoftwareWide from "./pages/main/software/SoftwareWide";
@@ -41,6 +40,7 @@ for (let i = 0; i < postJSON.length; i++) {
 }
 
 export const ModalContext = createContext();
+export const MessageContext = createContext();
 
 export default function App() {
   const homeIsNarrow = useMediaQuery({ query: "(max-aspect-ratio: 4/5)" });
@@ -54,8 +54,6 @@ export default function App() {
     );
   };
 
-  const [modalOpen, setModalOpen] = useState(false);
-
   return (
     <Router basename="/blog">
       <div className={homeIsNarrow ? "mainNarrow" : "mainWide"}>
@@ -63,10 +61,7 @@ export default function App() {
         {navBarIsNarrow && <NavBarNarrow />}
         <Switch>
           <Route exact path="/">
-            <ModalContext.Provider value={{ modalOpen, setModalOpen }}>
-              {!homeIsNarrow && <HomeWide />}
-              {homeIsNarrow && <HomeNarrow />}
-            </ModalContext.Provider>
+            <HomeWithContext />
           </Route>
           <Route exact path="/hardware">
             {!homeIsNarrow && <HardwareWide />}
