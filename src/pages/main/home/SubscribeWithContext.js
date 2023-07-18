@@ -13,6 +13,7 @@ export default function SubscribeWithContext() {
   const { setModalOpen, setMessage } = useContext(HomeContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [buttonContent, setButtonContent] = useState("Subscribe");
 
   const handleSubmit = () => {
     if (name.length === 0 && email.length === 0) {
@@ -40,11 +41,19 @@ export default function SubscribeWithContext() {
         note: null,
       });
     } else {
+      setButtonContent(
+        <img
+          src={require("../../../assets/images/loadingdots.gif")}
+          alt="loadingdots"
+          className="loadingdots"
+        />
+      );
       const url = "https://kfjrgwgp4a.execute-api.eu-west-2.amazonaws.com/dev";
       axios
         .post(url, { action: "subscribe", name: name, email: email })
         .then((response) => {
           setMessage(response.data);
+          setButtonContent("Subscribe");
         })
         .catch((error) => {
           setMessage({
@@ -54,6 +63,7 @@ export default function SubscribeWithContext() {
             content: "We can’t process your subscription now",
             note: error,
           });
+          setButtonContent("Subscribe");
         });
       setName("");
       setEmail("");
@@ -62,7 +72,17 @@ export default function SubscribeWithContext() {
   };
 
   return (
-    <SubscribeContext.Provider value={{ name, setName, email, setEmail, handleSubmit }}>
+    <SubscribeContext.Provider
+      value={{
+        name,
+        setName,
+        email,
+        setEmail,
+        buttonContent,
+        setButtonContent,
+        handleSubmit,
+      }}
+    >
       {!homeIsNarrow && <SubscribeWide />}
       {homeIsNarrow && <SubscribeNarrow />}
     </SubscribeContext.Provider>

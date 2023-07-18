@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { SubscribeContext } from "./SubscribeWithContext";
 
 export default function SubscribeWide() {
-  const { name, setName, email, setEmail, handleSubmit } =
+  const { name, setName, email, setEmail, buttonContent, handleSubmit } =
     useContext(SubscribeContext);
 
   return (
@@ -34,7 +34,7 @@ export default function SubscribeWide() {
             ></input>
           </div>
           <button className="subscribeButton" onClick={handleSubmit}>
-            Subscribe
+            {buttonContent}
           </button>
         </div>
         <div className="decor"></div>

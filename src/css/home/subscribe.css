@@ -105,7 +105,7 @@
 }
 
 .homeWide .subscribeBox .inputName,
-.homeWide .subscribeBox .inputEmail{
+.homeWide .subscribeBox .inputEmail {
   border: 0px;
   filter: drop-shadow(
     0px 0px calc(var(--subscribeWideWidth) / 120) var(--shadowgray)
@@ -174,13 +174,20 @@
   font-size: calc(var(--subscribeNarrowWidth) / 24);
 }
 
-
 .homeWide .subscribeBox .subscribeButton:hover,
 .homeNarrow .subscribeBox .subscribeButton:hover {
   background-color: var(--hoverdeepblue);
 }
 
-.homeWide .decor{
+.homeWide .subscribeBox .loadingdots {
+  width: calc(var(--subscribeWideWidth) * 0.09);
+}
+
+.homeNarrow .subscribeBox .loadingdots {
+  width: calc(var(--subscribeWideWidth) * 0.17);
+}
+
+.homeWide .decor {
   position: absolute;
   top: calc(var(--topboxWidth) * 0.085);
   left: calc(var(--topboxWidth) * 0.175);

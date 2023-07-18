@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { SubscribeContext } from "./SubscribeWithContext";
 
 export default function SubscribeNarrow() {
-  const { name, setName, email, setEmail, handleSubmit } =
+  const { name, setName, email, setEmail, buttonContent, handleSubmit } =
     useContext(SubscribeContext);
 
   return (
@@ -25,7 +25,7 @@ export default function SubscribeNarrow() {
               style={{ width: "calc(var(--subscribeNarrowWidth)*0.09)" }}
             ></div>
             <button className="subscribeButton" onClick={handleSubmit}>
-              Subscribe
+              {buttonContent}
             </button>
           </div>
           <input
