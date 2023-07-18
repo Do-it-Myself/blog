@@ -39,7 +39,7 @@
   --navbarHeight: 55px;
   --narrowBoxWidth: 100vw;
   --narrowBoxHeight: 130vw;
-  
+
   --postWidth: min(95vw, 720px);
   --padding: 40px;
   --imageWidth: min(calc(var(--postWidth) - var(--padding) * 2), 500px);

@@ -1,10 +1,4 @@
-import React, {
-  lazy,
-  Suspense,
-  cloneElement,
-  createContext,
-  useState,
-} from "react";
+import React, { lazy, Suspense, cloneElement, createContext } from "react";
 import FlatList from "flatlist-react";
 
 import NavBarWide from "./pages/main/navbar/NavBarWide";
@@ -39,8 +33,7 @@ for (let i = 0; i < postJSON.length; i++) {
   routeList.push(object);
 }
 
-export const ModalContext = createContext();
-export const MessageContext = createContext();
+export const NarrowContext = createContext();
 
 export default function App() {
   const homeIsNarrow = useMediaQuery({ query: "(max-aspect-ratio: 4/5)" });
@@ -55,29 +48,31 @@ export default function App() {
   };
 
   return (
-    <Router basename="/blog">
-      <div className={homeIsNarrow ? "mainNarrow" : "mainWide"}>
-        {!navBarIsNarrow && <NavBarWide />}
-        {navBarIsNarrow && <NavBarNarrow />}
-        <Switch>
-          <Route exact path="/">
-            <HomeWithContext />
-          </Route>
-          <Route exact path="/hardware">
-            {!homeIsNarrow && <HardwareWide />}
-            {homeIsNarrow && <HardwareNarrow />}
-          </Route>
-          <Route exact path="/software">
-            {!homeIsNarrow && <SoftwareWide />}
-            {homeIsNarrow && <SoftwareNarrow />}
-          </Route>
-          <Suspense fallback={<Loading homeIsNarrow={homeIsNarrow} />}>
-            <FlatList list={routeList} renderItem={renderRoute} />
-          </Suspense>
-        </Switch>
-      </div>
-      {!homeIsNarrow && <BottomBarWide />}
-      {homeIsNarrow && <BottomBarNarrow />}
-    </Router>
+    <NarrowContext.Provider value={{ homeIsNarrow, navBarIsNarrow }}>
+      <Router basename="/blog">
+        <div className={homeIsNarrow ? "mainNarrow" : "mainWide"}>
+          {!navBarIsNarrow && <NavBarWide />}
+          {navBarIsNarrow && <NavBarNarrow />}
+          <Switch>
+            <Route exact path="/">
+              <HomeWithContext />
+            </Route>
+            <Route exact path="/hardware">
+              {!homeIsNarrow && <HardwareWide />}
+              {homeIsNarrow && <HardwareNarrow />}
+            </Route>
+            <Route exact path="/software">
+              {!homeIsNarrow && <SoftwareWide />}
+              {homeIsNarrow && <SoftwareNarrow />}
+            </Route>
+            <Suspense fallback={<Loading homeIsNarrow={homeIsNarrow} />}>
+              <FlatList list={routeList} renderItem={renderRoute} />
+            </Suspense>
+          </Switch>
+        </div>
+        {!homeIsNarrow && <BottomBarWide />}
+        {homeIsNarrow && <BottomBarNarrow />}
+      </Router>
+    </NarrowContext.Provider>
   );
 }

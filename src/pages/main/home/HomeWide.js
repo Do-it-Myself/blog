@@ -1,30 +1,16 @@
 import React, { useContext } from "react";
 import FlatList from "flatlist-react";
 
-import Post from "./Post";
-import SubscribeWide from "./SubscribeWide";
+import SubscribeWithContext from "./SubscribeWithContext";
 import Modal from "./Modal";
-import { MessageContext } from "./HomeWithContext";
-
-const renderPost = (content) => {
-  return <Post key={content["id"]} content={content} />;
-};
+import { HomeContext } from "./HomeWithContext";
 
 export default function Home() {
-  const messageContextUser = useContext(MessageContext);
-
-  let postJSON = require("../../posts/Posts.json");
-  let reversedJSON = [...postJSON].reverse();
-  const postList = [
-    reversedJSON[6],
-    reversedJSON[3],
-    reversedJSON[4],
-    reversedJSON[2],
-  ];
+  const { message, postList, renderPost } = useContext(HomeContext);
 
   return (
     <div>
-      <Modal message={messageContextUser.message} />
+      <Modal response={message} />
       <div className="homeWide">
         <div className="topbox">
           <div className="flexbox">
@@ -57,7 +43,7 @@ export default function Home() {
                 <FlatList list={postList} renderItem={renderPost} />
               </div>
             </div>
-            <SubscribeWide />
+            <SubscribeWithContext />
           </div>
         </div>
       </div>

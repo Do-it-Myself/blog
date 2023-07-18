@@ -5,34 +5,31 @@ import {
   DialogTitle,
   DialogActions,
 } from "@mui/material";
-import { ModalContext, MessageContext } from "./HomeWithContext";
+import { HomeContext } from "./HomeWithContext";
 
-export default function Modal({ message }) {
-  const modalContextUser = useContext(ModalContext);
-  const messageContextUser = useContext(MessageContext);
-  const [open, setOpen] = useState(modalContextUser.modalOpen);
+export default function Modal({ response }) {
+  const { message, setMessage, modalOpen, setModalOpen } =
+    useContext(HomeContext);
+  const [open, setOpen] = useState(modalOpen);
 
   // so that App.js and Modal.js won't rerender the same time
   useEffect(() => {
-    setOpen(modalContextUser.modalOpen);
-  }, [modalContextUser.modalOpen]);
+    setOpen(modalOpen);
+  }, [modalOpen]);
 
   const handleClose = () => {
-    modalContextUser.setModalOpen(false);
-    // messageContextUser.setMessage({
-    //   error: null,
-    //   errorType: null,
-    //   title: null,
-    //   content: null,
-    //   note: null,
-    // });
+    setModalOpen(false);
+    setMessage({});
   };
+
+  if (!(message.error !== undefined && open)) {
+    return <></>;
+  }
 
   return (
     <Dialog
       className="dialog"
-      // {messageContextUser.message.error !== null && open}
-      open={open}
+      open={true}
       onClose={handleClose}
       aria-labelledby="subscribe-modal-title"
       aria-describedby="subscribe-modal-description"
@@ -40,23 +37,23 @@ export default function Modal({ message }) {
       <div className="dialogFlexBox">
         <img
           src={require(`../../../assets/images/${
-            message.error ? "failure" : "success"
+            response.error ? "failure" : "success"
           }.png`)}
           alt="subscribeModalImage"
           className="dialogImg"
         ></img>
         <DialogTitle id="subscribe-modal-title" className="dialogTitle">
-          {message.title}
+          {response.title}
         </DialogTitle>
         <DialogContent
           id="subscribe-modal-description"
           className="dialogDescription"
         >
-          {message.content}
+          {response.content}
         </DialogContent>
         <DialogActions>
           <button className="dialogButton" onClick={handleClose}>
-            {message.error ? "Try again" : "Close this window"}
+            Close this window
           </button>
         </DialogActions>
       </div>

@@ -46,7 +46,7 @@
   padding-left: 15px;
   padding-right: 15px;
 
-  background-color: #75a3da;
+  background-color: #84b1e9;
   border: none;
   box-shadow: 0px 0px 3px var(--shadowgray);
   outline: none;
@@ -54,4 +54,8 @@
   font-family: "SF-Pro-Display-Regular";
   color: white;
   font-size: 17px;
+}
+
+.dialog .dialogButton:hover {
+  background-color: #709ace;
 }
