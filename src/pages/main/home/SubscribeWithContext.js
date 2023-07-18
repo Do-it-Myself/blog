@@ -8,6 +8,14 @@ import SubscribeNarrow from "./SubscribeNarrow";
 
 export const SubscribeContext = createContext();
 
+const validateEmail = (email) => {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
 export default function SubscribeWithContext() {
   const { homeIsNarrow } = useContext(NarrowContext);
   const { setModalOpen, setMessage } = useContext(HomeContext);
@@ -38,6 +46,14 @@ export default function SubscribeWithContext() {
         errorType: "blanks",
         title: "Email is blank!",
         content: "Please fill in your email before subscribing",
+        note: null,
+      });
+    } else if (!validateEmail(email)) {
+      setMessage({
+        error: true,
+        errorType: "invalid email",
+        title: "Invalid email",
+        content: "Please fill in a valid email address",
         note: null,
       });
     } else {
