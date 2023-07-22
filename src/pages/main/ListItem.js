@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function ListItem({ content }) {
+  const PostImage = require("../posts" + content["dir"] + "/main.jpg")
   return (
     <div className="itemMargin">
       <Link to={content["dir"]} className="button">
@@ -10,7 +11,7 @@ export default function ListItem({ content }) {
           <div className="padding">
             <div className="itemFlex">
               <img
-                src={require("../posts" + content["dir"] + "/main.jpg")}
+                src={PostImage}
                 alt="main"
                 className="itemImage"
               />

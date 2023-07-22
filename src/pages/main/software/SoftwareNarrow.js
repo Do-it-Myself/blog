@@ -3,6 +3,8 @@ import FlatList from "flatlist-react";
 
 import ListItem from "../ListItem";
 
+import SoftwareImage from "../../../assets/images/software.png";
+
 const renderListItem = (content) => {
   return <ListItem key={content["id"]} content={content} />;
 };
@@ -16,7 +18,7 @@ export default function Software() {
         <div className="title">Software</div>
         <div className="imageCentre">
           <img
-            src={require("../../../assets/images/software.png")}
+            src={SoftwareImage}
             alt="software"
             className="image"
           />

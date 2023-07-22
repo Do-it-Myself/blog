@@ -58,8 +58,8 @@ export default function App() {
               <HomeWithContext />
             </Route>
             <Route exact path="/hardware">
-              {!homeIsNarrow && <HardwareWide />}
-              {homeIsNarrow && <HardwareNarrow />}
+                {!homeIsNarrow && <HardwareWide />}
+                {homeIsNarrow && <HardwareNarrow />}
             </Route>
             <Route exact path="/software">
               {!homeIsNarrow && <SoftwareWide />}

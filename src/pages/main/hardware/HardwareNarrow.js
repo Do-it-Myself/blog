@@ -3,6 +3,8 @@ import FlatList from "flatlist-react";
 
 import ListItem from "../ListItem";
 
+import HardwareImage from "../../../assets/images/hardware.png";
+
 const renderListItem = (content) => {
   return <ListItem key={content["id"]} content={content} />;
 };
@@ -16,7 +18,7 @@ export default function Hardware() {
         <div className="title">Hardware</div>
         <div className="imageCentre">
           <img
-            src={require("../../../assets/images/hardware.png")}
+            src={HardwareImage}
             alt="hardware"
             className="image"
           />

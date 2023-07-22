@@ -5,6 +5,7 @@ import SubscribeWithContext from "./SubscribeWithContext";
 import Modal from "./Modal";
 import { HomeContext } from "./HomeWithContext";
 
+import RobotImage from "../../../assets/images/robot.png"
 
 export default function Home() {
   const { message, postList, renderPost } = useContext(HomeContext);
@@ -26,7 +27,7 @@ export default function Home() {
             <div className="logoRow">
               <div className="logoCol">
                 <img
-                  src={require("../../../assets/images/robot.png")}
+                  src={RobotImage}
                   alt="robot"
                   className="image"
                 />
