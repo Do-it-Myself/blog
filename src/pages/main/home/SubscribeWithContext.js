@@ -8,6 +8,16 @@ import SubscribeNarrow from "./SubscribeNarrow";
 
 export const SubscribeContext = createContext();
 
+const isErrorMessage = (message) => {
+  return (
+    message.hasOwnProperty("error") &&
+    message.hasOwnProperty("errorType") &&
+    message.hasOwnProperty("title") &&
+    message.hasOwnProperty("content") &&
+    message.hasOwnProperty("note")
+  );
+};
+
 const validateEmail = (email) => {
   return String(email)
     .toLowerCase()
@@ -68,6 +78,9 @@ export default function SubscribeWithContext() {
       axios
         .post(url, { action: "subscribe", name: name, email: email })
         .then((response) => {
+          if (!isErrorMessage(response.data)) {
+            throw new Error(response.data.errorMessage ?? null);
+          }
           setMessage(response.data);
           setButtonContent("Subscribe");
         })
