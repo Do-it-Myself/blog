@@ -2,9 +2,6 @@
   --modalWidth: min(65%, 500px);
 }
 
-.dialog .MuiDialog-container {
-}
-
 .dialog .MuiPaper-root {
   border-radius: 20px;
   width: var(--modalWidth);
@@ -29,13 +26,13 @@
 }
 
 .dialog .dialogTitle {
-  font-family: "SF-Pro-Display-Bold";
+  font-family: "Inter-Bold";
   font-size: 30px;
   text-align: center;
 }
 
 .dialog .dialogDescription {
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   font-size: 20px;
   text-align: center;
 }
@@ -51,7 +48,7 @@
   box-shadow: 0px 0px 3px var(--shadowgray);
   outline: none;
 
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: white;
   font-size: 17px;
 }

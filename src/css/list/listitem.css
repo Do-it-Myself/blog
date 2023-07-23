@@ -71,7 +71,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
   height: calc(var(--listItemWidth) / 6);
   aspect-ratio: 16/9;
 }
@@ -98,7 +98,7 @@
 }
 
 .itemMargin .titleItem {
-  font-family: "SF-Pro-Display-SemiBold";
+  font-family: "Inter-SemiBold";
   color: black;
   font-size: calc(var(--listItemWidth) / 30);
 
@@ -106,13 +106,13 @@
 }
 
 .itemMargin .summary {
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: black;
   font-size: calc(var(--listItemWidth) / 37.5);
 }
 
 .itemMargin .date {
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: var(--deepgray);
   font-size: calc(var(--listItemWidth) / 37.5);
 }

@@ -63,7 +63,7 @@
 }
 
 .navbar .title {
-  font-family: "SF-Pro-Display-Bold";
+  font-family: "Inter-Bold";
   color: black;
   font-size: calc(var(--navbarHeight) * 0.4);
 }
@@ -79,7 +79,7 @@
 }
 
 .navbarWide .item {
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: black;
   font-size: calc(var(--navbarHeight) * 0.3);
 }

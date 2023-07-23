@@ -1,109 +1,105 @@
 .listWide {
-    min-height: calc(var(--minHeightWide) - var(--navbarHeight));;
-    
-    background: linear-gradient(90deg, var(--blue) 50%, var(--lightblue) 50%);
+  min-height: calc(var(--minHeightWide) - var(--navbarHeight));
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  background: linear-gradient(90deg, var(--blue) 50%, var(--lightblue) 50%);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .listNarrow {
-    min-height: calc(var(--minHeightNarrow) - var(--navbarHeight));;
-    
-    background: linear-gradient(180deg, var(--blue) 40vw, var(--lightblue) 40vw);;
+  min-height: calc(var(--minHeightNarrow) - var(--navbarHeight));
 
-    display: flex;
-    flex-direction: column;
+  background: linear-gradient(180deg, var(--blue) 40vw, var(--lightblue) 40vw);
+
+  display: flex;
+  flex-direction: column;
 }
 
-
 .listWide .horizontalFlexBox {
-    width: var(--listWideWidth);
-    min-height: 100%;
-    background: linear-gradient(90deg, var(--blue) 36%, var(--lightblue) 36%);
+  width: var(--listWideWidth);
+  min-height: 100%;
+  background: linear-gradient(90deg, var(--blue) 36%, var(--lightblue) 36%);
 
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .listWide .heading {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
-    width: calc(var(--listWideWidth)*0.33);
-    margin-left: calc(var(--listWideWidth)*0.015);
+  width: calc(var(--listWideWidth) * 0.33);
+  margin-left: calc(var(--listWideWidth) * 0.015);
 }
 
 .listWide .verticalFlexBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .listWide .title {
-    font-family: "SF-Pro-Display-Bold";
-    color: black;
-    font-size: calc(var(--listWideWidth)/35);
+  font-family: "Inter-Bold";
+  color: black;
+  font-size: calc(var(--listWideWidth) / 35);
 
-    margin-top: calc(var(--listWideWidth)/20);
-    margin-bottom: calc(var(--listWideWidth)/40); 
+  margin-top: calc(var(--listWideWidth) / 20);
+  margin-bottom: calc(var(--listWideWidth) / 40);
 }
 
 .listNarrow .title {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
-    font-family: "SF-Pro-Display-Bold";
-    color: black;
-    font-size: calc(var(--listNarrowWidth)/20);
+  font-family: "Inter-Bold";
+  color: black;
+  font-size: calc(var(--listNarrowWidth) / 20);
 
-    margin-top: calc(var(--listNarrowWidth)/20);
-    margin-bottom: calc(var(--listNarrowWidth)/40); 
+  margin-top: calc(var(--listNarrowWidth) / 20);
+  margin-bottom: calc(var(--listNarrowWidth) / 40);
 }
 
 .listWide .imageCentre {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
-    height: calc(var(--listWideWidth)/10);
+  height: calc(var(--listWideWidth) / 10);
 }
 
 .listNarrow .imageCentre {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
-    height: calc(var(--listWideWidth)/6);
+  height: calc(var(--listWideWidth) / 6);
 }
 
 .listWide .image {
-    width: calc(var(--listWideWidth)/10);
+  width: calc(var(--listWideWidth) / 10);
 }
 
 .listNarrow .image {
-    width: calc(var(--listNarrowWidth)/6);
+  width: calc(var(--listNarrowWidth) / 6);
 }
 
 .listWide .list {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-    margin-top: calc(var(--listWideWidth)/60)
+  margin-top: calc(var(--listWideWidth) / 60);
 }
 
 .listNarrow .list {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-    margin-top: calc(var(--listNarrowWidth)/60)
+  margin-top: calc(var(--listNarrowWidth) / 60);
 }
-
-
-

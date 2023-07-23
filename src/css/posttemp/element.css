@@ -1,21 +1,19 @@
 .p,
 .href {
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: black;
   font-size: 17px;
 
-  letter-spacing: 0.01em;
   line-height: 1.6;
 
   padding-bottom: 28px;
 }
 
 a.hrefembed {
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: black;
   font-size: 17px;
 
-  letter-spacing: 0.01em;
   line-height: 1.6;
 }
 
@@ -41,11 +39,10 @@ a.hrefembed:active {
 }
 
 ol.ol {
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: black;
   font-size: 17px;
 
-  letter-spacing: 0.01em;
   line-height: 1.6;
 
   padding-bottom: 28px;
@@ -55,11 +52,10 @@ ol.ol {
 }
 
 ul.ul {
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: black;
   font-size: 17px;
 
-  letter-spacing: 0.01em;
   line-height: 1.6;
 
   padding-bottom: 28px;
@@ -68,7 +64,7 @@ ul.ul {
 }
 
 .h1 {
-  font-family: "SF-Pro-Display-Bold";
+  font-family: "Inter-Bold";
   color: black;
   font-size: 28px;
 
@@ -76,7 +72,7 @@ ul.ul {
 }
 
 .h2 {
-  font-family: "SF-Pro-Display-SemiBold";
+  font-family: "Inter-SemiBold";
   color: black;
   font-size: 21px;
 
@@ -118,20 +114,18 @@ ul.ul {
   width: var(--imageWidth);
   table-layout: "fixed";
 
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: black;
   font-size: 17px;
-  letter-spacing: 0.01em;
 }
 
 .tableBorder {
   width: var(--imageWidth);
   table-layout: "fixed";
 
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: black;
   font-size: 17px;
-  letter-spacing: 0.01em;
 
   border: 0.25px solid black;
   border-spacing: 0px;

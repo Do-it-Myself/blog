@@ -1,55 +1,56 @@
-.bottombarWide, .bottombarNarrow {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.bottombarWide,
+.bottombarNarrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
-    background-color: var(--blue);
+  background-color: var(--blue);
 }
 
 .bottombarWide .flexbox {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  
-    width: var(--wideBarWidth);
-    max-width: 100%;
-    height: calc(var(--wideBarWidth)/18);
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-  .bottombarNarrow .flexbox {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  
-    width: var(--narrowBarWidth);
-    max-width: 100%;
-    height: calc(var(--narrowBarWidth)/9);
-  }
+  width: var(--wideBarWidth);
+  max-width: 100%;
+  height: calc(var(--wideBarWidth) / 18);
+}
+
+.bottombarNarrow .flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--narrowBarWidth);
+  max-width: 100%;
+  height: calc(var(--narrowBarWidth) / 9);
+}
 
 .bottombarWide .item {
-    font-family: "SF-Pro-Display-Regular";
-    color: black;
-    font-size: calc(var(--wideBarWidth)/60);
+  font-family: "Inter-Regular";
+  color: black;
+  font-size: calc(var(--wideBarWidth) / 60);
 
-    padding-left: calc(var(--wideBarWidth)/40);
-    padding-right: calc(var(--wideBarWidth)/40);
+  padding-left: calc(var(--wideBarWidth) / 40);
+  padding-right: calc(var(--wideBarWidth) / 40);
 }
 
 .bottombarNarrow .item {
-    font-family: "SF-Pro-Display-Regular";
-    color: black;
-    font-size: calc(var(--narrowBarWidth)/30);
+  font-family: "Inter-Regular";
+  color: black;
+  font-size: calc(var(--narrowBarWidth) / 30);
 
-    padding-left: calc(var(--narrowBarWidth)/40);
-    padding-right: calc(var(--narrowBarWidth)/40);
+  padding-left: calc(var(--narrowBarWidth) / 40);
+  padding-right: calc(var(--narrowBarWidth) / 40);
 }
 
 .bottombarMargin {
-  height: calc(var(--wideBarWidth)/35);
+  height: calc(var(--wideBarWidth) / 35);
 }
 
 .bottombarMarginNarrow {
-  height: calc(var(--narrowBarWidth)/17);
+  height: calc(var(--narrowBarWidth) / 17);
 }

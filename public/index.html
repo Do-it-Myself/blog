@@ -38,26 +38,31 @@
       // When the single page app is loaded further down in this file,
       // the correct url will be waiting in the browser's history for
       // the single page app to route accordingly.
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
           );
         }
-      }(window.location))
+      })(window.location);
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
-
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="font-preload">
-      <span style="font-family: 'SF-Pro-Display-Regular'"></span>
-      <span style="font-family: 'SF-Pro-Display-Semibold'"></span>
-      <span style="font-family: 'SF-Pro-Display-Bold'"></span>
+      <span style="font-family: 'Inter-Regular'"></span>
+      <span style="font-family: 'Inter-SemiBold'"></span>
+      <span style="font-family: 'Inter-Bold'"></span>
     </div>
     <div id="root"></div>
     <!--

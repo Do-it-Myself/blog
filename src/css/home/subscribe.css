@@ -63,28 +63,28 @@
 }
 
 .homeWide .subscribeBox .stayTuned {
-  font-family: "SF-Pro-Display-Bold";
+  font-family: "Inter-Bold";
   color: black;
   font-size: calc(var(--subscribeWideWidth) / 12);
   margin-bottom: calc(var(--subscribeWideWidth) / 30);
 }
 
 .homeNarrow .subscribeBox .stayTuned {
-  font-family: "SF-Pro-Display-Bold";
+  font-family: "Inter-Bold";
   color: black;
   font-size: calc(var(--subscribeNarrowWidth) / 12);
   margin-bottom: calc(var(--subscribeNarrowWidth) / 30);
 }
 
 .homeWide .subscribeBox .wantToReceiveUpdates {
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: black;
   font-size: calc(var(--subscribeWideWidth) / 24);
   margin-bottom: calc(var(--subscribeWideWidth) / 25);
 }
 
 .homeNarrow .subscribeBox .wantToReceiveUpdates {
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: black;
   font-size: calc(var(--subscribeNarrowWidth) / 24);
   margin-bottom: calc(var(--subscribeNarrowWidth) / 25);
@@ -117,7 +117,7 @@
   padding-left: calc(var(--subscribeWideWidth) / 40);
   padding-right: calc(var(--subscribeWideWidth) / 40);
 
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: black;
   font-size: calc(var(--subscribeWideWidth) / 24);
 }
@@ -135,7 +135,7 @@
   padding-left: calc(var(--subscribeNarrowWidth) / 40);
   padding-right: calc(var(--subscribeNarrowWidth) / 40);
 
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: black;
   font-size: calc(var(--subscribeNarrowWidth) / 24);
 }
@@ -152,7 +152,7 @@
   );
   outline: none;
 
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: white;
   font-size: calc(var(--subscribeWideWidth) / 24);
 }
@@ -169,7 +169,7 @@
   );
   outline: none;
 
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: white;
   font-size: calc(var(--subscribeNarrowWidth) / 24);
 }

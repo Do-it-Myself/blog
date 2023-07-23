@@ -39,7 +39,7 @@
 .postflex .posttitle {
   text-align: center;
 
-  font-family: "SF-Pro-Display-Bold";
+  font-family: "Inter-Bold";
   color: black;
   font-size: 28px;
 
@@ -52,7 +52,7 @@
 .postflex .postsummary {
   text-align: center;
 
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: black;
   font-size: 18px;
 
@@ -64,11 +64,11 @@
 .postflex .postdate {
   text-align: center;
 
-  font-family: "SF-Pro-Display-Regular";
+  font-family: "Inter-Regular";
   color: var(--deepgray);
   font-size: 15px;
 
-  padding-bottom: calc(var(--padding)*0.6);
+  padding-bottom: calc(var(--padding) * 0.6);
   padding-left: calc(var(--padding));
   padding-right: calc(var(--padding));
 }
@@ -93,12 +93,12 @@
 }
 
 .postflex .readmore {
-  font-family: "SF-Pro-Display-Bold";
+  font-family: "Inter-Bold";
   color: black;
-  font-size: max(calc(var(--postWidth)/25), 25px);
+  font-size: max(calc(var(--postWidth) / 25), 25px);
 
-  padding-top: max(calc(var(--postWidth)/15), 30px);
-  padding-bottom: max(calc(var(--postWidth)/35), 13px);
+  padding-top: max(calc(var(--postWidth) / 15), 30px);
+  padding-bottom: max(calc(var(--postWidth) / 35), 13px);
 
   text-align: center;
 }
