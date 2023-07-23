@@ -58,8 +58,10 @@ export default function App() {
               <HomeWithContext />
             </Route>
             <Route exact path="/hardware">
+              <Suspense fallback={<Loading homeIsNarrow={homeIsNarrow} />}>
                 {!homeIsNarrow && <HardwareWide />}
                 {homeIsNarrow && <HardwareNarrow />}
+              </Suspense>
             </Route>
             <Route exact path="/software">
               {!homeIsNarrow && <SoftwareWide />}

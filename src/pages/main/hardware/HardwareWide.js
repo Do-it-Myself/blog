@@ -1,18 +1,17 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import FlatList from "flatlist-react";
 
 import ListItem from "../ListItem";
-
 import HardwareImage from "../../../assets/images/hardware.png";
+import postJSON from "../../posts/Posts.json";
+
+const postList = postJSON.filter((post) => post["category"] === "hardware");
 
 const renderListItem = (content) => {
   return <ListItem key={content["id"]} content={content} />;
 };
 
 export default function Hardware() {
-  let postJSON = require("../../posts/Posts.json");
-  const postList = postJSON.filter((post) => post["category"] === "hardware");
-
   return (
     <div className="listWide">
       <div className="horizontalFlexBox">
