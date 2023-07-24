@@ -100,7 +100,7 @@
 .itemMargin .titleItem {
   font-family: "Inter-SemiBold";
   color: black;
-  font-size: calc(var(--listItemWidth) / 30);
+  font-size: calc(var(--listItemWidth) * 0.032);
 
   margin-bottom: calc(var(--listItemWidth) / 200);
 }
