@@ -46,6 +46,8 @@
 
   --minHeightWide: calc(100vh - calc(var(--wideBarWidth) / 18));
   --minHeightNarrow: calc(100vh - calc(var(--wideBarWidth) / 9));
+
+  letter-spacing: -0.035em
 }
 
 .mainWide {
