@@ -49,7 +49,7 @@
   --minHeightWide: calc(100vh - calc(var(--wideBarWidth) / 18));
   --minHeightNarrow: calc(100vh - calc(var(--wideBarWidth) / 9));
 
-  --notfoundWidth: min(90vw, 700px);
+  --displaytempWidth: min(90vw, 700px);
 
   letter-spacing: -0.035em;
 }
@@ -74,4 +74,4 @@
 @import "./css/posttemp/posttemp.css";
 @import "./css/posttemp/element.css";
 @import "./css/loading.css";
-@import "./css/notfound.css";
+@import "./css/displaytemp.css";

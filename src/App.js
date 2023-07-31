@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, cloneElement, createContext } from "react";
+import React, { lazy, Suspense, createContext } from "react";
 
 import NavBarWide from "./pages/main/navbar/NavBarWide";
 import NavBarNarrow from "./pages/main/navbar/NavBarNarrow";
@@ -45,11 +45,8 @@ export default function App() {
         <div className={homeIsNarrow ? "mainNarrow" : "mainWide"}>
           {!navBarIsNarrow && <NavBarWide />}
           {navBarIsNarrow && <NavBarNarrow />}
-          <Suspense fallback={<Loading/>}>
+          <Suspense fallback={<Loading />}>
             <Switch>
-              <Route exact path="/Robotic_Infinity_Gauntlet">
-                {routeList[0].page}
-              </Route>
               <Route exact path="/">
                 <HomeWithContext />
               </Route>
