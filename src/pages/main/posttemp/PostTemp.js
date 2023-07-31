@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useMediaQuery } from "react-responsive";
+import { NarrowContext } from "../../../App";
 
 import ListItem from "../ListItem";
 let postJSON = require("../../posts/Posts.json");
 
-
-export default function PostTemp({ content, homeIsNarrow, next, children }) {
+export default function PostTemp({ content, next, children }) {
   const isSmall = useMediaQuery({ query: "(max-width: 550px)" });
+  const { homeIsNarrow } = useContext(NarrowContext);
 
   return (
     <div className={homeIsNarrow ? "posttempNarrow" : "posttempWide"}>
@@ -26,8 +27,8 @@ export default function PostTemp({ content, homeIsNarrow, next, children }) {
         </div>
         <div className="readmore">Read more</div>
         <div className={isSmall ? "postSmall" : ""}>
-        <ListItem key={postJSON[next[0]]["id"]} content={postJSON[next[0]]} />
-        <ListItem key={postJSON[next[1]]["id"]} content={postJSON[next[1]]} />
+          <ListItem key={postJSON[next[0]]["id"]} content={postJSON[next[0]]} />
+          <ListItem key={postJSON[next[1]]["id"]} content={postJSON[next[1]]} />
         </div>
       </div>
     </div>

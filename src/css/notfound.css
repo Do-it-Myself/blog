@@ -1,0 +1,82 @@
+.notfound {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--backgroundblue);
+}
+
+.notfoundWide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(var(--minHeightWide) - var(--navbarHeight));
+  width: var(--notfoundWidth);
+}
+
+.notfoundNarrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(var(--minHeightNarrow) - var(--navbarHeight));
+  width: var(--notfoundWidth);
+}
+
+.notfound .whitebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: white;
+  border-radius: 15px;
+  filter: drop-shadow(
+    0px 0px calc(var(--notfoundWidth) / 180) var(--shadowgray)
+  );
+
+  margin: 5vw 0;
+  padding: 35px 25px;
+}
+
+.notfound .image {
+  width: 120px;
+  aspect-ratio: 1;
+  margin: 15px;
+}
+
+.notfound .title {
+  font-family: "Inter-Bold";
+  font-size: 30px;
+  text-align: center;
+  margin: 15px;
+}
+
+.notfound .content {
+  font-family: "Inter-Regular";
+  font-size: 20px;
+  text-align: center;
+  margin: 15px;
+  max-width: 500px;
+}
+
+.notfound .buttonDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 15px;
+}
+
+.notfound .button {
+  font-family: "Inter-Regular";
+  font-size: 18px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  background-color: var(--darkblue);
+  border: transparent;
+}
+
+.notfound .button:hover {
+  background-color: var(--hoverdarkblue);
+}

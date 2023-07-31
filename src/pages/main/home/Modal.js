@@ -39,7 +39,7 @@ export default function Modal({ response }) {
           src={require(`../../../assets/images/${
             response.error ? "failure" : "success"
           }.png`)}
-          alt="subscribeModalImage"
+          alt="Tick and Cross icons created by Roundicons - Flaticon"
           className="dialogImg"
         ></img>
         <DialogTitle id="subscribe-modal-title" className="dialogTitle">

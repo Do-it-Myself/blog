@@ -13,7 +13,7 @@ export default function Post({ content }) {
           <div className="postTitle">{content["title"]}</div>
           <img
             src={PostImage}
-            alt="main"
+            alt="postImage"
             className="postImage"
           />
         </div>

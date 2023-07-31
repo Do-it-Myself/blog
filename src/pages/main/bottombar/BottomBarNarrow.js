@@ -5,7 +5,7 @@ export default function BottomBar() {
   return (
     <div className="bottombarNarrow">
       <div className="flexbox">
-        <div className="item">Made by Chloe</div>
+        <div className="item">Icons created by Freepik - Flaticon</div>
       </div>
     </div>
   );

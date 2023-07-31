@@ -70,7 +70,7 @@ export default function SubscribeWithContext() {
       setButtonContent(
         <img
           src={require("../../../assets/images/loadingdots.gif")}
-          alt="loadingdots"
+          alt="Icon 'loadingdots' from loading.io"
           className="loadingdots"
         />
       );

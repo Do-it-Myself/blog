@@ -1,5 +1,4 @@
 import React, { lazy, Suspense, cloneElement, createContext } from "react";
-import FlatList from "flatlist-react";
 
 import NavBarWide from "./pages/main/navbar/NavBarWide";
 import NavBarNarrow from "./pages/main/navbar/NavBarNarrow";
@@ -14,6 +13,7 @@ import Loading from "./pages/main/Loading";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+import NotFound from "./pages/main/NotFound";
 
 let postJSON = require("./pages/posts/Posts.json");
 let routeList = [];
@@ -39,38 +39,38 @@ export default function App() {
   const homeIsNarrow = useMediaQuery({ query: "(max-aspect-ratio: 4/5)" });
   const navBarIsNarrow = useMediaQuery({ query: "(max-width: 390px)" });
 
-  const renderRoute = (post) => {
-    return (
-      <Route key={post.id} exact path={post.path}>
-        {cloneElement(post.page, { homeIsNarrow: homeIsNarrow })}
-      </Route>
-    );
-  };
-
   return (
     <NarrowContext.Provider value={{ homeIsNarrow, navBarIsNarrow }}>
       <Router basename="/blog">
         <div className={homeIsNarrow ? "mainNarrow" : "mainWide"}>
           {!navBarIsNarrow && <NavBarWide />}
           {navBarIsNarrow && <NavBarNarrow />}
-          <Switch>
-            <Route exact path="/">
-              <HomeWithContext />
-            </Route>
-            <Route exact path="/hardware">
-              <Suspense fallback={<Loading homeIsNarrow={homeIsNarrow} />}>
+          <Suspense fallback={<Loading/>}>
+            <Switch>
+              <Route exact path="/Robotic_Infinity_Gauntlet">
+                {routeList[0].page}
+              </Route>
+              <Route exact path="/">
+                <HomeWithContext />
+              </Route>
+              <Route exact path="/hardware">
                 {!homeIsNarrow && <HardwareWide />}
                 {homeIsNarrow && <HardwareNarrow />}
-              </Suspense>
-            </Route>
-            <Route exact path="/software">
-              {!homeIsNarrow && <SoftwareWide />}
-              {homeIsNarrow && <SoftwareNarrow />}
-            </Route>
-            <Suspense fallback={<Loading homeIsNarrow={homeIsNarrow} />}>
-              <FlatList list={routeList} renderItem={renderRoute} />
-            </Suspense>
-          </Switch>
+              </Route>
+              <Route exact path="/software">
+                {!homeIsNarrow && <SoftwareWide />}
+                {homeIsNarrow && <SoftwareNarrow />}
+              </Route>
+              {routeList.map((post) => (
+                <Route key={post.id} exact path={post.path}>
+                  {post.page}
+                </Route>
+              ))}
+              <Route path="*">
+                <NotFound />
+              </Route>
+            </Switch>
+          </Suspense>
         </div>
         {!homeIsNarrow && <BottomBarWide />}
         {homeIsNarrow && <BottomBarNarrow />}

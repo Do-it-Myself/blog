@@ -28,7 +28,7 @@ export default function Home() {
               <div className="logoCol">
                 <img
                   src={RobotImage}
-                  alt="robot"
+                  alt="Robot icons created by Freepik - Flaticon"
                   className="image"
                 />
               </div>

@@ -43,7 +43,7 @@
   padding-left: 15px;
   padding-right: 15px;
 
-  background-color: #84b1e9;
+  background-color: var(--darkblue);
   border: none;
   box-shadow: 0px 0px 3px var(--shadowgray);
   outline: none;
@@ -54,5 +54,5 @@
 }
 
 .dialog .dialogButton:hover {
-  background-color: #709ace;
+  background-color: var(--hoverdarkblue);
 }

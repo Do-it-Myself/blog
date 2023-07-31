@@ -16,7 +16,7 @@ export default function Hardware() {
     <div className="listNarrow">
       <div className="title">Hardware</div>
       <div className="imageCentre">
-        <img src={HardwareImage} alt="hardware" className="image" />
+        <img src={HardwareImage} alt="Robotic arm icons created by Freepik - Flaticon" className="image" />
       </div>
       <div className="list">
         <FlatList list={postList} renderItem={renderListItem} />

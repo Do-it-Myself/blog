@@ -20,6 +20,8 @@
 }
 
 :root {
+  --darkblue: #5d95da;
+  --hoverdarkblue: #77a9e5;
   --hoverdeepblue: #a9d1ff;
   --verydeepblue: #b8d6f9;
   --deepblue: #bedcff;
@@ -47,7 +49,9 @@
   --minHeightWide: calc(100vh - calc(var(--wideBarWidth) / 18));
   --minHeightNarrow: calc(100vh - calc(var(--wideBarWidth) / 9));
 
-  letter-spacing: -0.035em
+  --notfoundWidth: min(90vw, 700px);
+
+  letter-spacing: -0.035em;
 }
 
 .mainWide {
@@ -70,3 +74,4 @@
 @import "./css/posttemp/posttemp.css";
 @import "./css/posttemp/element.css";
 @import "./css/loading.css";
+@import "./css/notfound.css";

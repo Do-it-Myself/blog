@@ -19,7 +19,7 @@ export default function Software() {
           <div className="verticalFlexBox">
             <div className="title">Software</div>
             <div className="imageCentre">
-              <img src={SoftwareImage} alt="software" className="image" />
+              <img src={SoftwareImage} alt="Software icons created by Freepik - Flaticon" className="image" />
             </div>
           </div>
         </div>
