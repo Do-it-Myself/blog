@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import FlatList from "flatlist-react";
 
-import SubscribeWithContext from "./SubscribeWithContext";
+import SubscribeWithContext from "src/pages/main/home/SubscribeWithContext";
 import Modal from "./Modal";
-import { HomeContext } from "./HomeWithContext";
+import { HomeContext } from "src/pages/main/home//HomeWithContext";
 
-import RobotImage from "../../../assets/images/robot.png"
+import RobotImage from "src/assets/images/robot.png"
 
 export default function Home() {
   const { message, postList, renderPost } = useContext(HomeContext);

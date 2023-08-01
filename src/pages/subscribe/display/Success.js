@@ -2,17 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import DisplayTemp from "src/pages/DisplayTemp";
 
-export default function NotFound() {
+export default function Success() {
   return (
     <DisplayTemp
-      img={require("src/assets/images/notfound.png")}
-      title="Oops! Page not found"
-      content="This page doesn’t exist or was removed - we suggest you to go back to the home page"
+      img={require("src/assets/images/sun.png")}
+      title="Thank you for subscribing"
+      content="You have been added to the newsletter subscription list"
       button={
         <Link to="/" className="button">
           Go Home
         </Link>
       }
     />
-  );
+  )
 }

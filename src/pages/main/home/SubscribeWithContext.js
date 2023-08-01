@@ -1,10 +1,10 @@
 import React, { useState, createContext, useContext } from "react";
 import axios from "axios";
-import { NarrowContext } from "../../../App";
-import { HomeContext } from "./HomeWithContext";
+import { NarrowContext } from "src/App";
+import { HomeContext } from "src/pages/main/home/HomeWithContext";
 
-import SubscribeWide from "./SubscribeWide";
-import SubscribeNarrow from "./SubscribeNarrow";
+import SubscribeWide from "src/pages/main/home/SubscribeWide";
+import SubscribeNarrow from "src/pages/main/home/SubscribeNarrow";
 
 export const SubscribeContext = createContext();
 
@@ -69,7 +69,7 @@ export default function SubscribeWithContext() {
     } else {
       setButtonContent(
         <img
-          src={require("../../../assets/images/loadingdots.gif")}
+          src={require("src/assets/images/loadingdots.gif")}
           alt="Icon 'loadingdots' from loading.io"
           className="loadingdots"
         />

@@ -1,9 +1,9 @@
 import React from "react";
 import FlatList from "flatlist-react";
 
-import ListItem from "../ListItem";
-import SoftwareImage from "../../../assets/images/software.png";
-import postJSON from "../../posts/Posts.json";
+import ListItem from "src/pages/main/ListItem";
+import SoftwareImage from "src/assets/images/software.png";
+import postJSON from "src/pages/posts/Posts.json";
 
 const postList = postJSON.filter((post) => post["category"] === "software");
 

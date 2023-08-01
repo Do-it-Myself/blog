@@ -1,22 +1,26 @@
 @font-face {
   font-family: "Inter-Regular";
-  src: url("./assets/fonts/Inter-Regular.ttf");
+  src: url("src/assets/fonts/Inter-Regular.ttf");
 }
 
 @font-face {
   font-family: "Inter-SemiBold";
-  src: url("./assets/fonts/Inter-SemiBold.ttf");
+  src: url("src/assets/fonts/Inter-SemiBold.ttf");
 }
 
 @font-face {
   font-family: "Inter-Bold";
-  src: url("./assets/fonts/Inter-Bold.ttf");
+  src: url("src/assets/fonts/Inter-Bold.ttf");
 }
 
 * {
   margin: 0px;
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
+}
+
+button {
+  cursor: pointer;
 }
 
 :root {
@@ -62,16 +66,16 @@
   min-height: var(--minHeightNarrow);
 }
 
-@import "./css/navbar/dropdownmenu.css";
-@import "./css/navbar/navbar.css";
-@import "./css/bottombar/bottombar.css";
-@import "./css/home/topBox.css";
-@import "./css/home/thingsDid.css";
-@import "./css/home/subscribe.css";
-@import "./css/home/modal.css";
-@import "./css/list/list.css";
-@import "./css/list/listitem.css";
-@import "./css/posttemp/posttemp.css";
-@import "./css/posttemp/element.css";
-@import "./css/loading.css";
-@import "./css/displaytemp.css";
+@import "src/css/navbar/dropdownmenu.css";
+@import "src/css/navbar/navbar.css";
+@import "src/css/bottombar/bottombar.css";
+@import "src/css/home/topBox.css";
+@import "src/css/home/thingsDid.css";
+@import "src/css/home/subscribe.css";
+@import "src/css/home/modal.css";
+@import "src/css/list/list.css";
+@import "src/css/list/listitem.css";
+@import "src/css/posttemp/posttemp.css";
+@import "src/css/posttemp/element.css";
+@import "src/css/loading.css";
+@import "src/css/displaytemp.css";

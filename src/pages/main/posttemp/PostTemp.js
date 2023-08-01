@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { useMediaQuery } from "react-responsive";
-import { NarrowContext } from "../../../App";
+import { NarrowContext } from "src/App";
 
-import ListItem from "../ListItem";
-let postJSON = require("../../posts/Posts.json");
+import ListItem from "src/pages/main/ListItem";
+let postJSON = require("src/pages/posts/Posts.json");
 
 export default function PostTemp({ content, next, children }) {
   const isSmall = useMediaQuery({ query: "(max-width: 550px)" });
@@ -18,7 +18,7 @@ export default function PostTemp({ content, next, children }) {
           <div className="postdate">{content["date"]}</div>
           <div className="imageflex">
             <img
-              src={require("../../posts" + content["dir"] + "/main.jpg")}
+              src={require("src/pages/posts" + content["dir"] + "/main.jpg")}
               alt="main"
               className="image"
             />

@@ -1,26 +1,29 @@
 import React, { lazy, Suspense, createContext } from "react";
 
-import NavBarWide from "./pages/main/navbar/NavBarWide";
-import NavBarNarrow from "./pages/main/navbar/NavBarNarrow";
-import HomeWithContext from "./pages/main/home/HomeWithContext";
-import HardwareWide from "./pages/main/hardware/HardwareWide";
-import HardwareNarrow from "./pages/main/hardware/HardwareNarrow";
-import SoftwareWide from "./pages/main/software/SoftwareWide";
-import SoftwareNarrow from "./pages/main/software/SoftwareNarrow";
-import BottomBarWide from "./pages/main/bottombar/BottomBarWide";
-import BottomBarNarrow from "./pages/main/bottombar/BottomBarNarrow";
-import Loading from "./pages/main/Loading";
+import NavBarWide from "src/pages/main/navbar/NavBarWide";
+import NavBarNarrow from "src/pages/main/navbar/NavBarNarrow";
+import HomeWithContext from "src/pages/main/home/HomeWithContext";
+import HardwareWide from "src/pages/main/hardware/HardwareWide";
+import HardwareNarrow from "src/pages/main/hardware/HardwareNarrow";
+import SoftwareWide from "src/pages/main/software/SoftwareWide";
+import SoftwareNarrow from "src/pages/main/software/SoftwareNarrow";
+import BottomBarWide from "src/pages/main/bottombar/BottomBarWide";
+import BottomBarNarrow from "src/pages/main/bottombar/BottomBarNarrow";
+import Loading from "src/pages/main/Loading";
+
+import Subscribe from "src/pages/subscribe/Subscribe";
+import Unsubscribe from "src/pages/subscribe/Unsubscribe";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
-import NotFound from "./pages/main/NotFound";
+import NotFound from "src/pages/main/NotFound";
 
-let postJSON = require("./pages/posts/Posts.json");
+let postJSON = require("src/pages/posts/Posts.json");
 let routeList = [];
 
 for (let i = 0; i < postJSON.length; i++) {
   const Page = lazy(() =>
-    import("./pages/posts" + postJSON[i]["dir"] + "/Page")
+    import("src/pages/posts" + postJSON[i]["dir"] + "/Page")
   );
   const i_nxt = i === postJSON.length - 1 ? 0 : i + 1;
   const i_nxtnxt = i_nxt === postJSON.length - 1 ? 0 : i_nxt + 1;
@@ -58,11 +61,20 @@ export default function App() {
                 {!homeIsNarrow && <SoftwareWide />}
                 {homeIsNarrow && <SoftwareNarrow />}
               </Route>
+
               {routeList.map((post) => (
                 <Route key={post.id} exact path={post.path}>
                   {post.page}
                 </Route>
               ))}
+
+              <Route path="/subscribe">
+                <Subscribe />
+              </Route>
+              <Route path="/unsubscribe">
+                <Unsubscribe />
+              </Route>
+
               <Route path="*">
                 <NotFound />
               </Route>

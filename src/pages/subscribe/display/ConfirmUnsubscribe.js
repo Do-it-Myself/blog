@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import DisplayTemp from "src/pages/DisplayTemp";
 
-export default function NotFound() {
+export default function ConfirmUnsubscribe() {
   return (
     <DisplayTemp
-      img={require("src/assets/images/notfound.png")}
-      title="Oops! Page not found"
-      content="This page doesn’t exist or was removed - we suggest you to go back to the home page"
+      img={require("src/assets/images/rain.png")}
+      title="We are sorry to see you go"
+      content="You have been removed from the newsletter subscription list"
       button={
         <Link to="/" className="button">
           Go Home

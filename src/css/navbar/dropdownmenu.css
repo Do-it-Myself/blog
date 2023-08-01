@@ -9,7 +9,7 @@
   justify-content: flex-start;
 }
 
-.menuItem {
+.dropDownMenu .menuItem {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -23,8 +23,8 @@
   font-size: calc(var(--navbarheight) * 0.3);
 }
 
-.dropDownMenu .item a:hover,
-.item a:active {
+.dropDownMenu .menuItem:hover,
+.menuItem:active {
   color: var(--deepgray);
   text-decoration: none;
 }

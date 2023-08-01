@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PostTemp, P, H1, H2, Href, Img, Youtube } from "../Element";
+import { PostTemp, P, H1, H2, Href, Img, Youtube } from "src/pages/posts/Element";
 
 export default function Page(props) {
   return (

@@ -5,7 +5,7 @@ import {
   DialogTitle,
   DialogActions,
 } from "@mui/material";
-import { HomeContext } from "./HomeWithContext";
+import { HomeContext } from "src/pages/main/home/HomeWithContext";
 
 export default function Modal({ response }) {
   const { message, setMessage, modalOpen, setModalOpen } =
@@ -36,7 +36,7 @@ export default function Modal({ response }) {
     >
       <div className="dialogFlexBox">
         <img
-          src={require(`../../../assets/images/${
+          src={require(`src/assets/images/${
             response.error ? "failure" : "success"
           }.png`)}
           alt="Tick and Cross icons created by Roundicons - Flaticon"

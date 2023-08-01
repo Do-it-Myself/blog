@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import { NarrowContext } from "../../App";
+import { NarrowContext } from "src/App";
 
 export default function Loading() {
   const { homeIsNarrow } = useContext(NarrowContext);
@@ -8,7 +8,7 @@ export default function Loading() {
     <div className="loading">
       <div className={homeIsNarrow ? "loadingNarrow" : "loadingWide"}>
         <img
-          src={require("../../assets/images/loading.gif")}
+          src={require("src/assets/images/loading.gif")}
           alt="Icon 'loadingcircle' from loading.io"
           className="image"
         />

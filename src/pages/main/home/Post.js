@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Post({ content }) {
 
-  const PostImage = require("../../posts" + content["dir"] + "/main.jpg")
+  const PostImage = require("src/pages/posts" + content["dir"] + "/main.jpg")
 
   return (
     <div className="postMargin">

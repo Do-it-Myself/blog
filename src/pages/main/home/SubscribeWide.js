@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { SubscribeContext } from "./SubscribeWithContext";
+import { SubscribeContext } from "src/pages/main/home/SubscribeWithContext";
 
 export default function SubscribeWide() {
   const { name, setName, email, setEmail, buttonContent, handleSubmit } =

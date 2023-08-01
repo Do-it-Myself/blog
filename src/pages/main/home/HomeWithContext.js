@@ -1,9 +1,9 @@
 import React, { useState, createContext, useContext } from "react";
 import { NarrowContext } from "../../../App";
 
-import Post from "./Post";
-import HomeWide from "./HomeWide";
-import HomeNarrow from "./HomeNarrow";
+import Post from "src/pages/main/home/Post";
+import HomeWide from "src/pages/main/home/HomeWide";
+import HomeNarrow from "src/pages/main/home/HomeNarrow";
 
 export const HomeContext = createContext();
 export const ModalContext = createContext(); //del
@@ -13,7 +13,7 @@ const renderPost = (content) => {
   return <Post key={content["id"]} content={content} />;
 };
 
-let postJSON = require("../../posts/Posts.json");
+let postJSON = require("src/pages/posts/Posts.json");
 let reversedJSON = [...postJSON].reverse();
 const postList = [
   reversedJSON[6],

@@ -1,9 +1,9 @@
 import React from "react";
 import FlatList from "flatlist-react";
 
-import ListItem from "../ListItem";
-import HardwareImage from "../../../assets/images/hardware.png";
-import postJSON from "../../posts/Posts.json";
+import ListItem from "src/pages/main/ListItem";
+import HardwareImage from "src/assets/images/hardware.png";
+import postJSON from "src/pages/posts/Posts.json";
 
 const postList = postJSON.filter((post) => post["category"] === "hardware");
 
@@ -16,7 +16,11 @@ export default function Hardware() {
     <div className="listNarrow">
       <div className="title">Hardware</div>
       <div className="imageCentre">
-        <img src={HardwareImage} alt="Robotic arm icons created by Freepik - Flaticon" className="image" />
+        <img
+          src={HardwareImage}
+          alt="Robotic arm icons created by Freepik - Flaticon"
+          className="image"
+        />
       </div>
       <div className="list">
         <FlatList list={postList} renderItem={renderListItem} />

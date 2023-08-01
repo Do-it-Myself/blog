@@ -92,6 +92,14 @@
 
   margin-left: calc(var(--navbarHeight) * 0.3);
   margin-right: calc(var(--navbarHeight) * 0.3);
+
+  background-color: transparent;
+  border: transparent;
+}
+
+.navbarNarrow .item:hover,
+.navbarNarrowActive .item:hover {
+  opacity: 60%;
 }
 
 .navbarNarrow .menu,
