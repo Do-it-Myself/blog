@@ -114,9 +114,10 @@
   );
   outline: none;
 
-  height: calc(var(--subscribeWideWidth) / 12);
+  /* height: calc(var(--subscribeWideWidth) / 12); */
   border-radius: calc(var(--subscribeWideWidth) * 0.01);
-  padding: 0 calc(var(--subscribeWideWidth) / 40);
+  padding: calc(var(--subscribeWideWidth) / 60)
+    calc(var(--subscribeWideWidth) / 40);
 
   font-family: "Inter-Regular";
   color: black;
@@ -131,10 +132,9 @@
   );
   outline: none;
 
-  height: calc(var(--subscribeNarrowWidth) / 12);
   border-radius: calc(var(--subscribeNarrowWidth) * 0.01);
-  padding-left: calc(var(--subscribeNarrowWidth) / 40);
-  padding-right: calc(var(--subscribeNarrowWidth) / 40);
+  padding: calc(var(--subscribeNarrowWidth) / 60)
+    calc(var(--subscribeNarrowWidth) / 40);
 
   font-family: "Inter-Regular";
   color: black;
