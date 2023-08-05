@@ -22,15 +22,11 @@ export default function SubscribeWide() {
               value={name}
               style={{ width: "calc(var(--subscribeWideWidth)*0.2)" }}
             ></input>
-            <div
-              style={{ width: "calc(var(--subscribeWideWidth)*0.05)" }}
-            ></div>
             <input
               className="inputEmail"
               placeholder="example@gmail.com"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
-              style={{ width: "calc(var(--subscribeWideWidth)*0.75)" }}
             ></input>
           </div>
           <button className="subscribeButton" onClick={handleSubmit}>

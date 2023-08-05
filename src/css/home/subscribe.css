@@ -23,6 +23,7 @@
 .homeWide .subscribeBox {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 
   position: absolute;
   left: calc(var(--topboxWidth) * 0.27);
@@ -50,10 +51,8 @@
 
   width: calc(var(--subscribeNarrowWidth) * 0.68);
   margin-top: calc(var(--subscribeNarrowWidth) * 0.125);
-  padding-top: calc(var(--subscribeNarrowWidth) * 0.085);
-  padding-bottom: calc(var(--subscribeNarrowWidth) * 0.085);
-  padding-left: calc(var(--subscribeNarrowWidth) * 0.13);
-  padding-right: calc(var(--subscribeNarrowWidth) * 0.13);
+  padding: calc(var(--subscribeNarrowWidth) * 0.085)
+    calc(var(--subscribeNarrowWidth) * 0.13);
 
   background-color: var(--lightblue);
   border-radius: calc(var(--subscribeNarrowWidth) * 0.05);
@@ -93,14 +92,17 @@
 .homeWide .subscribeBox .inputFlex {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  margin-bottom: calc(var(--subscribeWideWidth) / 17);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: calc(var(--subscribeWideWidth) / 22);
+  width: 100%;
 }
 
 .homeNarrow .subscribeBox .firstRowFlex {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: calc(var(--subscribeNarrowWidth) / 25);
 }
 
@@ -114,8 +116,7 @@
 
   height: calc(var(--subscribeWideWidth) / 12);
   border-radius: calc(var(--subscribeWideWidth) * 0.01);
-  padding-left: calc(var(--subscribeWideWidth) / 40);
-  padding-right: calc(var(--subscribeWideWidth) / 40);
+  padding: 0 calc(var(--subscribeWideWidth) / 40);
 
   font-family: "Inter-Regular";
   color: black;
@@ -141,16 +142,16 @@
 }
 
 .homeWide .subscribeBox .subscribeButton {
-  height: calc(var(--subscribeWideWidth) / 12);
-  width: calc(var(--subscribeWideWidth) * 0.25);
   border-radius: calc(var(--subscribeWideWidth) * 0.01);
 
   background-color: var(--verydeepblue);
   border: none;
   filter: drop-shadow(
-    0px 0px calc(var(--subscribeWideWidth) / 120) var(--shadowgray)
+    0 0 calc(var(--subscribeWideWidth) / 120) var(--shadowgray)
   );
   outline: none;
+  padding: calc(var(--subscribeWideWidth) / 60)
+    calc(var(--subscribeWideWidth) / 35);
 
   font-family: "Inter-Regular";
   color: white;
@@ -158,8 +159,6 @@
 }
 
 .homeNarrow .subscribeBox .subscribeButton {
-  height: calc(var(--subscribeNarrowWidth) / 12);
-  width: calc(var(--subscribeNarrowWidth) * 0.35);
   border-radius: calc(var(--subscribeNarrowWidth) * 0.01);
 
   background-color: var(--verydeepblue);
@@ -168,6 +167,8 @@
     0px 0px calc(var(--subscribeNarrowWidth) / 120) var(--shadowgray)
   );
   outline: none;
+  padding: calc(var(--subscribeNarrowWidth) / 60)
+    calc(var(--subscribeNarrowWidth) / 35);
 
   font-family: "Inter-Regular";
   color: white;

@@ -21,9 +21,6 @@ export default function SubscribeNarrow() {
               value={name}
               style={{ width: "calc(var(--subscribeNarrowWidth)*0.33)" }}
             ></input>
-            <div
-              style={{ width: "calc(var(--subscribeNarrowWidth)*0.09)" }}
-            ></div>
             <button className="subscribeButton" onClick={handleSubmit}>
               {buttonContent}
             </button>
@@ -33,7 +30,6 @@ export default function SubscribeNarrow() {
             placeholder="example@gmail.com"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
-            style={{ width: "calc(var(--subscribeNarrowWidth)*0.63)" }}
           ></input>
         </div>
         <div className="decor"></div>

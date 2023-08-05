@@ -23,6 +23,11 @@ button {
   cursor: pointer;
 }
 
+button,
+input::placeholder {
+  letter-spacing: -0.035em;
+}
+
 :root {
   --darkblue: #5d95da;
   --hoverdarkblue: #77a9e5;
