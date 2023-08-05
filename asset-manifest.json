@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/blog/static/css/main.6890ed90.css",
-    "main.js": "/blog/static/js/main.01208aab.js",
-    "static/js/477.2a1a32e0.chunk.js": "/blog/static/js/477.2a1a32e0.chunk.js",
+    "main.css": "/blog/static/css/main.ffd29738.css",
+    "main.js": "/blog/static/js/main.7be3cc2e.js",
+    "static/js/477.a717be41.chunk.js": "/blog/static/js/477.a717be41.chunk.js",
     "static/media/Wired.jpg": "/blog/static/media/Wired.c8aa6a9895ad6554fedf.jpg",
     "static/media/Serial.jpg": "/blog/static/media/Serial.983d46c4ec2cf43eb5ac.jpg",
     "static/media/OLED.jpg": "/blog/static/media/OLED.d49ef9b4ace71f9c2c18.jpg",
@@ -16,11 +16,11 @@
     "static/media/Perfboard_circuit.PNG": "/blog/static/media/Perfboard_circuit.f0ef63c93f69f2704117.PNG",
     "static/media/Variable_length.gif": "/blog/static/media/Variable_length.533d38efdd30edc36e1c.gif",
     "static/media/Wireless.jpg": "/blog/static/media/Wireless.0a5cd691cd8d1c5a8ac6.jpg",
-    "static/media/SF-Pro-Display-Bold.ttf": "/blog/static/media/SF-Pro-Display-Bold.09823f23366c566c9c58.ttf",
-    "static/media/SF-Pro-Display-Semibold.ttf": "/blog/static/media/SF-Pro-Display-Semibold.7c7f0ea67accd424999c.ttf",
-    "static/media/SF-Pro-Display-Regular.ttf": "/blog/static/media/SF-Pro-Display-Regular.67a29aa05d5c9a60406f.ttf",
     "static/media/Perfboard.jpg": "/blog/static/media/Perfboard.d03ad60b54fce282dda1.jpg",
     "static/media/Assembly.jpg": "/blog/static/media/Assembly.8ae5bc6aa14e49106fe5.jpg",
+    "static/media/Inter-Bold.ttf": "/blog/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
+    "static/media/Inter-SemiBold.ttf": "/blog/static/media/Inter-SemiBold.4d56bb21f2399db8ad48.ttf",
+    "static/media/Inter-Regular.ttf": "/blog/static/media/Inter-Regular.e89cb19905e7db5591b0.ttf",
     "static/media/CAD_render.PNG": "/blog/static/media/CAD_render.444e20bf780aea22ade7.PNG",
     "static/media/Base.jpg": "/blog/static/media/Base.7ea78b72198739f3d5d2.jpg",
     "static/media/Rough_sketch.PNG": "/blog/static/media/Rough_sketch.7bb8b370109bfc5a1e96.PNG",
@@ -48,10 +48,12 @@
     "static/media/Whole_Assembly_Internal.PNG": "/blog/static/media/Whole_Assembly_Internal.c29410732d0937a222b6.PNG",
     "static/media/Rows_and_columns.PNG": "/blog/static/media/Rows_and_columns.fe2a4234adca2ef819f7.PNG",
     "static/media/Easy_banner_replacement_sketch.PNG": "/blog/static/media/Easy_banner_replacement_sketch.fe98d715824c9b265736.PNG",
+    "static/media/loadingdots.gif": "/blog/static/media/loadingdots.4998fe187cd7dd8cd377.gif",
     "static/media/Technologies.PNG": "/blog/static/media/Technologies.04ae85a6e254649af68a.PNG",
     "static/media/Easy_connection.PNG": "/blog/static/media/Easy_connection.be7a753a25f15cb895c4.PNG",
     "static/media/hardware.png": "/blog/static/media/hardware.35e58713f6cd8219e63c.png",
     "static/media/No_queue_jump.PNG": "/blog/static/media/No_queue_jump.0d196e7c44d615a8ad90.PNG",
+    "static/media/sun.png": "/blog/static/media/sun.e418ee861da4df248ad7.png",
     "static/media/Aesthetic_halfway.PNG": "/blog/static/media/Aesthetic_halfway.1f0c2879dfba90b7a909.PNG",
     "static/media/robot.png": "/blog/static/media/robot.ab1f5d284516d31b2513.png",
     "static/media/Retractable_belt_barrier.PNG": "/blog/static/media/Retractable_belt_barrier.7b2bb2daaf7347eb2274.PNG",
@@ -60,18 +62,22 @@
     "static/media/Problem_2.PNG": "/blog/static/media/Problem_2.e75f12d3715abecfb2f8.PNG",
     "static/media/Problem_1.PNG": "/blog/static/media/Problem_1.c17b6198e36b659719e7.PNG",
     "static/media/Post_and_rope_barrier.PNG": "/blog/static/media/Post_and_rope_barrier.12bfa090bb99e419d8b0.PNG",
+    "static/media/notfound.png": "/blog/static/media/notfound.9198721dbb3f097688c1.png",
     "static/media/Flow_diagram_3.PNG": "/blog/static/media/Flow_diagram_3.c69e6ef3ff90e369d41f.PNG",
+    "static/media/rain.png": "/blog/static/media/rain.4f590f254bee1c1a97ae.png",
     "static/media/Flow_diagram_2.PNG": "/blog/static/media/Flow_diagram_2.47c99c4c12922a0f5393.PNG",
     "static/media/Flow_diagram_1.PNG": "/blog/static/media/Flow_diagram_1.92cbc4bfbb86009f5102.PNG",
     "static/media/software.png": "/blog/static/media/software.0c5ac0ce8c144c07a59b.png",
+    "static/media/failure.png": "/blog/static/media/failure.1583723861a66fb05605.png",
+    "static/media/success.png": "/blog/static/media/success.6f298cca57a5a8b36055.png",
     "static/media/Algorithm.PNG": "/blog/static/media/Algorithm.00335e91c4cbf58cde08.PNG",
     "index.html": "/blog/index.html",
-    "main.6890ed90.css.map": "/blog/static/css/main.6890ed90.css.map",
-    "main.01208aab.js.map": "/blog/static/js/main.01208aab.js.map",
-    "477.2a1a32e0.chunk.js.map": "/blog/static/js/477.2a1a32e0.chunk.js.map"
+    "main.ffd29738.css.map": "/blog/static/css/main.ffd29738.css.map",
+    "main.7be3cc2e.js.map": "/blog/static/js/main.7be3cc2e.js.map",
+    "477.a717be41.chunk.js.map": "/blog/static/js/477.a717be41.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6890ed90.css",
-    "static/js/main.01208aab.js"
+    "static/css/main.ffd29738.css",
+    "static/js/main.7be3cc2e.js"
   ]
 }
