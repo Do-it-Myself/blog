@@ -76,7 +76,7 @@ export default function SubscribeWithContext() {
       );
       const url = "https://kfjrgwgp4a.execute-api.eu-west-2.amazonaws.com/dev";
       axios
-        .post(url, { action: "subscribe", name: name, email: email })
+        .post(url, { name: name, email: email })
         .then((response) => {
           if (!isErrorMessage(response.data)) {
             throw new Error(response.data.errorMessage ?? null);
