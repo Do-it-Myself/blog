@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/blog/static/css/main.24255a6d.css",
+    "main.css": "/blog/static/css/main.bc43ba8b.css",
     "main.js": "/blog/static/js/main.425a54ee.js",
     "static/js/477.a717be41.chunk.js": "/blog/static/js/477.a717be41.chunk.js",
     "static/media/Wired.jpg": "/blog/static/media/Wired.c8aa6a9895ad6554fedf.jpg",
@@ -72,12 +72,12 @@
     "static/media/success.png": "/blog/static/media/success.6f298cca57a5a8b36055.png",
     "static/media/Algorithm.PNG": "/blog/static/media/Algorithm.00335e91c4cbf58cde08.PNG",
     "index.html": "/blog/index.html",
-    "main.24255a6d.css.map": "/blog/static/css/main.24255a6d.css.map",
+    "main.bc43ba8b.css.map": "/blog/static/css/main.bc43ba8b.css.map",
     "main.425a54ee.js.map": "/blog/static/js/main.425a54ee.js.map",
     "477.a717be41.chunk.js.map": "/blog/static/js/477.a717be41.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.24255a6d.css",
+    "static/css/main.bc43ba8b.css",
     "static/js/main.425a54ee.js"
   ]
 }
