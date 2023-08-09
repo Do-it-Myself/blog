@@ -37,9 +37,8 @@ input::placeholder {
   --blue: #d8eaff;
   --lightblue: #f2f8ff;
   --backgroundblue: #f1f7ff;
-  --deepgray: #b0b0b0;
-  --gray: #ededed;
-  --shadowgray: rgb(209, 209, 209);
+  --deepgray: #6f6f6f;
+  --shadowgray: #d1d1d1;
 
   --wideBoxWidth: min(100vw, 1300px);
   --wideBoxHeight: min(50vw, 650px);
