@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/blog/static/css/main.bc43ba8b.css",
-    "main.js": "/blog/static/js/main.425a54ee.js",
-    "static/js/477.a717be41.chunk.js": "/blog/static/js/477.a717be41.chunk.js",
+    "main.css": "/blog/static/css/main.b148e598.css",
+    "main.js": "/blog/static/js/main.3a1f497d.js",
+    "static/js/477.a08e6f6c.chunk.js": "/blog/static/js/477.a08e6f6c.chunk.js",
     "static/media/Wired.jpg": "/blog/static/media/Wired.c8aa6a9895ad6554fedf.jpg",
     "static/media/Serial.jpg": "/blog/static/media/Serial.983d46c4ec2cf43eb5ac.jpg",
     "static/media/OLED.jpg": "/blog/static/media/OLED.d49ef9b4ace71f9c2c18.jpg",
@@ -56,6 +56,7 @@
     "static/media/sun.png": "/blog/static/media/sun.e418ee861da4df248ad7.png",
     "static/media/Aesthetic_halfway.PNG": "/blog/static/media/Aesthetic_halfway.1f0c2879dfba90b7a909.PNG",
     "static/media/robot.png": "/blog/static/media/robot.ab1f5d284516d31b2513.png",
+    "static/media/doubts.png": "/blog/static/media/doubts.eeac1dc864fe4c5b48d9.png",
     "static/media/Retractable_belt_barrier.PNG": "/blog/static/media/Retractable_belt_barrier.7b2bb2daaf7347eb2274.PNG",
     "static/media/Compare.PNG": "/blog/static/media/Compare.721a6333aab34646304f.PNG",
     "static/media/Flow_diagram_4.PNG": "/blog/static/media/Flow_diagram_4.bb7294c3d0526ff39db3.PNG",
@@ -72,12 +73,12 @@
     "static/media/success.png": "/blog/static/media/success.6f298cca57a5a8b36055.png",
     "static/media/Algorithm.PNG": "/blog/static/media/Algorithm.00335e91c4cbf58cde08.PNG",
     "index.html": "/blog/index.html",
-    "main.bc43ba8b.css.map": "/blog/static/css/main.bc43ba8b.css.map",
-    "main.425a54ee.js.map": "/blog/static/js/main.425a54ee.js.map",
-    "477.a717be41.chunk.js.map": "/blog/static/js/477.a717be41.chunk.js.map"
+    "main.b148e598.css.map": "/blog/static/css/main.b148e598.css.map",
+    "main.3a1f497d.js.map": "/blog/static/js/main.3a1f497d.js.map",
+    "477.a08e6f6c.chunk.js.map": "/blog/static/js/477.a08e6f6c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc43ba8b.css",
-    "static/js/main.425a54ee.js"
+    "static/css/main.b148e598.css",
+    "static/js/main.3a1f497d.js"
   ]
 }
