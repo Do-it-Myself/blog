@@ -152,6 +152,7 @@
   outline: none;
   padding: calc(var(--subscribeWideWidth) / 60)
     calc(var(--subscribeWideWidth) / 35);
+  width: calc(var(--subscribeWideWidth) / 3.9);
 
   font-family: "Inter-Regular";
   color: white;
@@ -169,6 +170,7 @@
   outline: none;
   padding: calc(var(--subscribeNarrowWidth) / 60)
     calc(var(--subscribeNarrowWidth) / 35);
+  width: calc(var(--subscribeNarrowWidth) / 3.9);
 
   font-family: "Inter-Regular";
   color: white;
