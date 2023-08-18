@@ -34,14 +34,15 @@ const MessageToDisplay = (message) => (
 export default function Unsubscribe() {
   const [page, setPage] = useState(<Loading />);
 
-  const handleSubscribe = () => {
+  const handleUnubscribe = () => {
     const queryParameters = new URLSearchParams(window.location.search);
-    const id = queryParameters.get("a");
-    const email = queryParameters.get("b");
+    const a = queryParameters.get("a");
+    const b = queryParameters.get("b");
     const url = "https://0wmxrra8k5.execute-api.eu-west-2.amazonaws.com/dev";
     axios
-      .get(`${url}?id=${id}&email=${email}`)
+      .get(`${url}?a=${a}&b=${b}`)
       .then((response) => {
+        console.log(response.data);
         if (!isErrorMessage(response.data)) {
           throw new Error(response.data.errorMessage ?? null);
         }
@@ -57,11 +58,12 @@ export default function Unsubscribe() {
             note: error,
           })
         );
+        console.log(error);
       });
   };
 
   useEffect(() => {
-    handleSubscribe();
+    handleUnubscribe();
   }, []);
 
   return page;

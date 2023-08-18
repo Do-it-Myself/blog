@@ -36,11 +36,11 @@ export default function Subscribe() {
 
   const handleSubscribe = () => {
     const queryParameters = new URLSearchParams(window.location.search);
-    const id = queryParameters.get("a");
-    const email = queryParameters.get("b");
+    const a = queryParameters.get("a");
+    const b = queryParameters.get("b");
     const url = "https://bgxs6su04k.execute-api.eu-west-2.amazonaws.com/dev";
     axios
-      .get(`${url}?id=${id}&email=${email}`)
+      .get(`${url}?a=${a}&b=${b}`)
       .then((response) => {
         if (!isErrorMessage(response.data)) {
           throw new Error(response.data.errorMessage ?? null);
