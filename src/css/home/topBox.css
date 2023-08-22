@@ -65,13 +65,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  margin-left: calc(var(--topboxWidth) * 0.21);
-  margin-right: calc(var(--topboxWidth) * 0.15);
+  margin: auto calc(var(--topboxWidth) * 0.13) auto
+    calc(var(--topboxWidth) * 0.2);
 
   width: calc(var(--topboxWidth) * 0.64);
   max-width: 100%;
-  height: calc(var(--topboxHeight) * 0.5);
 }
 
 .homeWide .topbox .line1 {
@@ -83,7 +81,8 @@
 .homeNarrow .topbox .line1 {
   font-family: "Inter-Bold";
   color: black;
-  font-size: calc(var(--topboxHeight) / 20);
+  font-size: calc(var(--topboxWidth) / 12);
+  padding-bottom: calc(var(--topboxWidth) / 100);
 }
 
 .homeWide .topbox .line2 {
@@ -96,20 +95,20 @@
 .homeNarrow .topbox .line2 {
   font-family: "Inter-Bold";
   color: black;
-  font-size: calc(var(--topboxHeight) / 15);
-  padding-bottom: calc(var(--topboxHeight) / 100);
+  font-size: calc(var(--topboxWidth) / 9);
+  padding-bottom: calc(var(--topboxWidth) / 38);
 }
 
 .homeWide .topbox .line3 {
   font-family: "Inter-Regular";
   color: black;
-  font-size: calc(var(--topboxHeight) / 25);
+  font-size: calc(var(--topboxHeight) / 20);
 }
 
 .homeNarrow .topbox .line3 {
   font-family: "Inter-Regular";
   color: black;
-  font-size: calc(var(--topboxHeight) / 38);
+  font-size: calc(var(--topboxWidth) / 22);
 }
 
 .homeWide .topbox .logoRow {
@@ -147,7 +146,7 @@
   --imageWidth: calc(var(--topboxWidth) * 0.7);
   width: var(--imageWidth);
   max-width: 100%;
-  height: 100%;
+  height: var(--imageWidth);
 }
 
 .homeWide .topbox .image {
