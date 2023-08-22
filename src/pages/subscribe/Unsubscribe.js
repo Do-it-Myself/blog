@@ -14,7 +14,46 @@ const isErrorMessage = (message) => {
   );
 };
 
-const MessageToDisplay = (message) => (
+const AskUnsubscribeDisplay = ({ confirmUnsubscribe, cancelUnsubscribe }) => (
+  <DisplayTemp
+    img={require("src/assets/images/rain.png")}
+    title="Unsubscribe?"
+    content="If you unsubscribe, we are not able to send you any updates from our blog"
+    button={
+      <>
+        <button
+          className="button"
+          style={{ width: "7.5em" }}
+          onClick={confirmUnsubscribe}
+        >
+          Unsubscribe
+        </button>
+        <button
+          className="buttonlight"
+          style={{ width: "7.5em" }}
+          onClick={cancelUnsubscribe}
+        >
+          Cancel
+        </button>
+      </>
+    }
+  />
+);
+
+const CancelUnsubscribeDisplay = () => (
+  <DisplayTemp
+    img={require("src/assets/images/sun.png")}
+    title="Excellent choice!"
+    content="We will keep you updated with our newsletter"
+    button={
+      <Link to="/" className="button">
+        Go Home
+      </Link>
+    }
+  />
+);
+
+const ConfirmUnsubscribeDisplay = ({ message }) => (
   <DisplayTemp
     img={
       message.error
@@ -32,9 +71,10 @@ const MessageToDisplay = (message) => (
 );
 
 export default function Unsubscribe() {
-  const [page, setPage] = useState(<Loading />);
+  const [page, setPage] = useState();
 
-  const handleUnubscribe = () => {
+  const confirmUnsubscribe = () => {
+    setPage(<Loading />);
     const queryParameters = new URLSearchParams(window.location.search);
     const a = queryParameters.get("a");
     const b = queryParameters.get("b");
@@ -42,28 +82,37 @@ export default function Unsubscribe() {
     axios
       .get(`${url}?a=${a}&b=${b}`)
       .then((response) => {
-        console.log(response.data);
         if (!isErrorMessage(response.data)) {
           throw new Error(response.data.errorMessage ?? null);
         }
-        setPage(MessageToDisplay(response.data));
+        setPage(<ConfirmUnsubscribeDisplay message={response.data} />);
       })
       .catch((error) => {
         setPage(
-          MessageToDisplay({
-            error: true,
-            errorType: "catch error",
-            title: "Oops... something went wrong",
-            content: "We can’t process your unsubscription now",
-            note: error,
-          })
+          <ConfirmUnsubscribeDisplay
+            message={{
+              error: true,
+              errorType: "catch error",
+              title: "Oops... something went wrong",
+              content: "We can’t process your unsubscription now",
+              note: error,
+            }}
+          />
         );
-        console.log(error);
       });
   };
 
+  const cancelUnsubscribe = () => {
+    setPage(<CancelUnsubscribeDisplay />);
+  };
+
   useEffect(() => {
-    handleUnubscribe();
+    setPage(
+      <AskUnsubscribeDisplay
+        confirmUnsubscribe={confirmUnsubscribe}
+        cancelUnsubscribe={cancelUnsubscribe}
+      />
+    );
   }, []);
 
   return page;
