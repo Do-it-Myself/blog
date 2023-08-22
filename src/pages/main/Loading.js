@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import { NarrowContext } from "src/App";
+import { CircularProgress } from "@mui/material";
 
 export default function Loading() {
   const { homeIsNarrow } = useContext(NarrowContext);
@@ -7,11 +8,7 @@ export default function Loading() {
   return (
     <div className="loading">
       <div className={homeIsNarrow ? "loadingNarrow" : "loadingWide"}>
-        <img
-          src={require("src/assets/images/loading.gif")}
-          alt="Icon 'loadingcircle' from loading.io"
-          className="image"
-        />
+        <CircularProgress className="circularProgress"/>
       </div>
     </div>
   );

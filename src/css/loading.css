@@ -19,10 +19,6 @@
   height: calc(var(--minHeightNarrow) - var(--navbarHeight));
 }
 
-.loadingWide .image {
-  width: 20vh;
-}
-
-.loadingNarrow .image {
-  width: 20vw;
+.circularProgress {
+  color: var(--darkblue) !important;
 }
