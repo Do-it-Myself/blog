@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/blog/static/css/main.7b66ffc5.css",
-    "main.js": "/blog/static/js/main.0d60ba91.js",
-    "static/js/477.0c40a5cb.chunk.js": "/blog/static/js/477.0c40a5cb.chunk.js",
+    "main.css": "/blog/static/css/main.ba62f037.css",
+    "main.js": "/blog/static/js/main.82bd1b89.js",
+    "static/js/477.0acc4fff.chunk.js": "/blog/static/js/477.0acc4fff.chunk.js",
     "static/media/Wired.jpg": "/blog/static/media/Wired.c8aa6a9895ad6554fedf.jpg",
     "static/media/Serial.jpg": "/blog/static/media/Serial.983d46c4ec2cf43eb5ac.jpg",
     "static/media/OLED.jpg": "/blog/static/media/OLED.d49ef9b4ace71f9c2c18.jpg",
@@ -41,7 +41,6 @@
     "static/media/Whole_Assembly.PNG": "/blog/static/media/Whole_Assembly.73683fd49ed302a32d29.PNG",
     "static/media/Stability.PNG": "/blog/static/media/Stability.b6def2ff82841bffe7c0.PNG",
     "static/media/PCB_layout.PNG": "/blog/static/media/PCB_layout.5b28011a100a46eaea10.PNG",
-    "static/media/loading.gif": "/blog/static/media/loading.c61d6f0b0c8641dc8763.gif",
     "static/media/Hand.jpg": "/blog/static/media/Hand.321f1e38f4a086582dd9.jpg",
     "static/media/Customizable.PNG": "/blog/static/media/Customizable.a778d58f218d1155fca7.PNG",
     "static/media/Lock.gif": "/blog/static/media/Lock.ea5e724549e97438f781.gif",
@@ -73,12 +72,12 @@
     "static/media/success.png": "/blog/static/media/success.6f298cca57a5a8b36055.png",
     "static/media/Algorithm.PNG": "/blog/static/media/Algorithm.00335e91c4cbf58cde08.PNG",
     "index.html": "/blog/index.html",
-    "main.7b66ffc5.css.map": "/blog/static/css/main.7b66ffc5.css.map",
-    "main.0d60ba91.js.map": "/blog/static/js/main.0d60ba91.js.map",
-    "477.0c40a5cb.chunk.js.map": "/blog/static/js/477.0c40a5cb.chunk.js.map"
+    "main.ba62f037.css.map": "/blog/static/css/main.ba62f037.css.map",
+    "main.82bd1b89.js.map": "/blog/static/js/main.82bd1b89.js.map",
+    "477.0acc4fff.chunk.js.map": "/blog/static/js/477.0acc4fff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7b66ffc5.css",
-    "static/js/main.0d60ba91.js"
+    "static/css/main.ba62f037.css",
+    "static/js/main.82bd1b89.js"
   ]
 }
