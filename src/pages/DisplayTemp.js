@@ -1,6 +1,16 @@
 import React, { useContext } from "react";
 import { NarrowContext } from "../App";
 
+export const isErrorMessage = (message) => {
+  return (
+    message.hasOwnProperty("error") &&
+    message.hasOwnProperty("errorType") &&
+    message.hasOwnProperty("title") &&
+    message.hasOwnProperty("content") &&
+    message.hasOwnProperty("note")
+  );
+};
+
 export default function DisplayTemp({ img, title, content, button }) {
   const { homeIsNarrow } = useContext(NarrowContext);
 

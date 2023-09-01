@@ -29,10 +29,8 @@ input::placeholder {
 }
 
 :root {
-  --darkblue: #5d95da;
+  --darkblue: #679ee1;
   --hoverdarkblue: #77a9e5;
-  --hoverdeepblue: #a9d1ff;
-  --verydeepblue: #b8d6f9;
   --deepblue: #bedcff;
   --blue: #d8eaff;
   --lightblue: #f2f8ff;

@@ -34,7 +34,10 @@ export default function SubscribeWithContext() {
   const [buttonContent, setButtonContent] = useState("Subscribe");
 
   const handleSubmit = () => {
-    if (name.length === 0 && email.length === 0) {
+    const nameTrim = name.trim()
+    const emailTrim = email.trim()
+
+    if (nameTrim.length === 0 && emailTrim.length === 0) {
       setMessage({
         error: true,
         errorType: "blanks",
@@ -42,7 +45,7 @@ export default function SubscribeWithContext() {
         content: "Please fill in your name and email before subscribing",
         note: null,
       });
-    } else if (name.length === 0) {
+    } else if (nameTrim.length === 0) {
       setMessage({
         error: true,
         errorType: "blanks",
@@ -50,7 +53,7 @@ export default function SubscribeWithContext() {
         content: "Please fill in your name before subscribing",
         note: null,
       });
-    } else if (email.length === 0) {
+    } else if (emailTrim.length === 0) {
       setMessage({
         error: true,
         errorType: "blanks",
@@ -58,7 +61,7 @@ export default function SubscribeWithContext() {
         content: "Please fill in your email before subscribing",
         note: null,
       });
-    } else if (!validateEmail(email)) {
+    } else if (!validateEmail(emailTrim)) {
       setMessage({
         error: true,
         errorType: "invalid email",
@@ -76,7 +79,7 @@ export default function SubscribeWithContext() {
       );
       const url = "https://kfjrgwgp4a.execute-api.eu-west-2.amazonaws.com/dev";
       axios
-        .post(url, { name: name, email: email })
+        .post(url, { name: nameTrim, email: emailTrim })
         .then((response) => {
           if (!isErrorMessage(response.data)) {
             throw new Error(response.data.errorMessage ?? null);

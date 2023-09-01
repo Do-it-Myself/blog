@@ -144,7 +144,7 @@
 .homeWide .subscribeBox .subscribeButton {
   border-radius: calc(var(--subscribeWideWidth) * 0.01);
 
-  background-color: var(--verydeepblue);
+  background-color: var(--darkblue);
   border: none;
   filter: drop-shadow(
     0 0 calc(var(--subscribeWideWidth) / 120) var(--shadowgray)
@@ -162,7 +162,7 @@
 .homeNarrow .subscribeBox .subscribeButton {
   border-radius: calc(var(--subscribeNarrowWidth) * 0.01);
 
-  background-color: var(--verydeepblue);
+  background-color: var(--darkblue);
   border: none;
   filter: drop-shadow(
     0px 0px calc(var(--subscribeNarrowWidth) / 120) var(--shadowgray)
@@ -179,7 +179,7 @@
 
 .homeWide .subscribeBox .subscribeButton:hover,
 .homeNarrow .subscribeBox .subscribeButton:hover {
-  background-color: var(--hoverdeepblue);
+  background-color: var(--hoverdarkblue);
 }
 
 .homeWide .subscribeBox .loadingdots {

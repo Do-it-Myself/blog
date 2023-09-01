@@ -1,18 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "src/pages/main/Loading";
-import DisplayTemp from "src/pages/DisplayTemp";
+import DisplayTemp, { isErrorMessage } from "src/pages/DisplayTemp";
 import { Link } from "react-router-dom";
-
-const isErrorMessage = (message) => {
-  return (
-    message.hasOwnProperty("error") &&
-    message.hasOwnProperty("errorType") &&
-    message.hasOwnProperty("title") &&
-    message.hasOwnProperty("content") &&
-    message.hasOwnProperty("note")
-  );
-};
 
 const AskUnsubscribeDisplay = ({ confirmUnsubscribe, cancelUnsubscribe }) => (
   <DisplayTemp

@@ -17,6 +17,7 @@ import Unsubscribe from "src/pages/subscribe/Unsubscribe";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import NotFound from "src/pages/main/NotFound";
+import ResendEmail from "./pages/subscribe/ResendEmail";
 
 let postJSON = require("src/pages/posts/Posts.json");
 let routeList = [];
@@ -73,6 +74,9 @@ export default function App() {
               </Route>
               <Route path="/unsubscribe">
                 <Unsubscribe />
+              </Route>
+              <Route path="/resendemail">
+                <ResendEmail />
               </Route>
 
               <Route path="*">
