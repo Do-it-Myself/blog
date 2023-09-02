@@ -43,7 +43,7 @@ const CancelUnsubscribeDisplay = () => (
   />
 );
 
-const ConfirmUnsubscribeDisplay = ({ message }) => (
+const ConfirmUnsubscribeDisplay = ({ message, resubscribe }) => (
   <DisplayTemp
     img={
       message.error
@@ -53,15 +53,79 @@ const ConfirmUnsubscribeDisplay = ({ message }) => (
     title={message.title}
     content={message.content}
     button={
-      <Link to="/" className="button">
-        Go Home
-      </Link>
+      <>
+        <Link
+          to="/"
+          style={message.error ? {} : { width: "7.5em" }}
+          className="button"
+        >
+          Go Home
+        </Link>
+        {!message.error && (
+          <button
+            className="buttonlight"
+            style={{ width: "7.5em" }}
+            onClick={resubscribe}
+          >
+            Resubscribe
+          </button>
+        )}
+      </>
+    }
+  />
+);
+
+const ResubscribeDisplay = ({ message }) => (
+  <DisplayTemp
+    img={
+      message.error
+        ? require("src/assets/images/doubts.png")
+        : require("src/assets/images/sun.png")
+    }
+    title={message.title}
+    content={message.content}
+    button={
+      <>
+        <Link to="/" className="button">
+          Go Home
+        </Link>
+      </>
     }
   />
 );
 
 export default function Unsubscribe() {
   const [page, setPage] = useState();
+
+  const resubscribe = () => {
+    setPage(<Loading />);
+    const queryParameters = new URLSearchParams(window.location.search);
+    const a = queryParameters.get("a");
+    const b = queryParameters.get("b");
+    const c = queryParameters.get("c");
+    const url = "https://due8wf0bb8.execute-api.eu-west-2.amazonaws.com/dev";
+    axios
+      .get(`${url}?a=${a}&b=${b}&c=${c}`)
+      .then((response) => {
+        if (!isErrorMessage(response.data)) {
+          throw new Error(response.data.errorMessage ?? null);
+        }
+        setPage(<ResubscribeDisplay message={response.data} />);
+      })
+      .catch((error) => {
+        setPage(
+          <ResubscribeDisplay
+            message={{
+              error: true,
+              errorType: "catch error",
+              title: "Oops... something went wrong",
+              content: "We can’t process your resubscription now",
+              note: error,
+            }}
+          />
+        );
+      });
+  };
 
   const confirmUnsubscribe = () => {
     setPage(<Loading />);
@@ -75,7 +139,12 @@ export default function Unsubscribe() {
         if (!isErrorMessage(response.data)) {
           throw new Error(response.data.errorMessage ?? null);
         }
-        setPage(<ConfirmUnsubscribeDisplay message={response.data} />);
+        setPage(
+          <ConfirmUnsubscribeDisplay
+            message={response.data}
+            resubscribe={resubscribe}
+          />
+        );
       })
       .catch((error) => {
         setPage(
@@ -87,6 +156,7 @@ export default function Unsubscribe() {
               content: "We can’t process your unsubscription now",
               note: error,
             }}
+            resubscribe={resubscribe}
           />
         );
       });

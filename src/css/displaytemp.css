@@ -73,9 +73,11 @@
   border-radius: 6px;
   margin: 8px;
   text-decoration: none;
+  text-align: center;
   color: white;
   background-color: var(--darkblue);
   border: transparent;
+  box-sizing: border-box;
 }
 
 .displaytemp .button:hover {
@@ -89,10 +91,12 @@
   border-radius: 6px;
   margin: 8px;
   text-decoration: none;
+  text-align: center;
   color: var(--darkblue);
   background-color: white;
   border-color: var(--darkblue);
   border-style: solid;
+  box-sizing: border-box;
 }
 
 .displaytemp .buttonlight:hover {
