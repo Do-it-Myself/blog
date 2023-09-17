@@ -28,7 +28,7 @@ export default function ResendEmail() {
     const queryParameters = new URLSearchParams(window.location.search);
     const a = queryParameters.get("a");
     const b = queryParameters.get("b");
-    const url = "https://7hhlbnuvj2.execute-api.eu-west-2.amazonaws.com/dev";
+    const url = `https://7hhlbnuvj2.execute-api.eu-west-2.amazonaws.com/${process.env.REACT_APP_ENV}`;
     axios
       .get(`${url}?a=${a}&b=${b}`)
       .then((response) => {

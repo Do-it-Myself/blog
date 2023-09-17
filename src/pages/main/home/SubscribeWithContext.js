@@ -77,7 +77,7 @@ export default function SubscribeWithContext() {
           className="loadingdots"
         />
       );
-      const url = "https://kfjrgwgp4a.execute-api.eu-west-2.amazonaws.com/dev";
+      const url = `https://kfjrgwgp4a.execute-api.eu-west-2.amazonaws.com/${process.env.REACT_APP_ENV}`;
       axios
         .post(url, { name: nameTrim, email: emailTrim })
         .then((response) => {
