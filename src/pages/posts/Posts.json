@@ -1,5 +1,13 @@
 [
     {
+        "id": 7,
+        "title": "Gravity 4",
+        "dir": "/Gravity_4",
+        "summary": "Connect 4 with a twist",
+        "category": "software",
+        "date": "Aug 8, 2024"
+    },
+    {
         "id": 6,
         "title": "Robotic Infinity Gauntlet",
         "dir": "/Robotic_Infinity_Gauntlet",

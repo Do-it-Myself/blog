@@ -16,10 +16,10 @@ const renderPost = (content) => {
 let postJSON = require("src/pages/posts/Posts.json");
 let reversedJSON = [...postJSON].reverse();
 const postList = [
+  reversedJSON[7],
   reversedJSON[6],
   reversedJSON[3],
   reversedJSON[4],
-  reversedJSON[2],
 ];
 
 export default function HomeWithContext() {
