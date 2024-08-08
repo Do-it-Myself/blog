@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/blog/static/css/main.199db1cc.css",
-    "main.js": "/blog/static/js/main.a689825c.js",
-    "static/js/477.adc0ce61.chunk.js": "/blog/static/js/477.adc0ce61.chunk.js",
+    "main.js": "/blog/static/js/main.6ab3012b.js",
+    "static/js/477.a2c380fb.chunk.js": "/blog/static/js/477.a2c380fb.chunk.js",
     "static/media/Wired.jpg": "/blog/static/media/Wired.c8aa6a9895ad6554fedf.jpg",
     "static/media/Serial.jpg": "/blog/static/media/Serial.983d46c4ec2cf43eb5ac.jpg",
     "static/media/OLED.jpg": "/blog/static/media/OLED.d49ef9b4ace71f9c2c18.jpg",
     "static/media/PCB.jpg": "/blog/static/media/PCB.4d89ab42a2e3ddc5b8f9.jpg",
     "static/media/Final.jpg": "/blog/static/media/Final.68a86456fa0a7d0bfdc0.jpg",
-    "static/media/main.jpg": "/blog/static/media/main.4137e99a1e3253ee7d28.jpg",
+    "static/media/main.jpg": "/blog/static/media/main.95d72f49f0eb9193aa8b.jpg",
     "static/media/Finger_movement.gif": "/blog/static/media/Finger_movement.c1c172895e25731d8197.gif",
     "static/media/Easy_banner_replacement.gif": "/blog/static/media/Easy_banner_replacement.0b061f395ebbc3e9fd60.gif",
     "static/media/Prototype.jpg": "/blog/static/media/Prototype.42dbbb3428f035bc4f5c.jpg",
@@ -73,11 +73,11 @@
     "static/media/Algorithm.PNG": "/blog/static/media/Algorithm.00335e91c4cbf58cde08.PNG",
     "index.html": "/blog/index.html",
     "main.199db1cc.css.map": "/blog/static/css/main.199db1cc.css.map",
-    "main.a689825c.js.map": "/blog/static/js/main.a689825c.js.map",
-    "477.adc0ce61.chunk.js.map": "/blog/static/js/477.adc0ce61.chunk.js.map"
+    "main.6ab3012b.js.map": "/blog/static/js/main.6ab3012b.js.map",
+    "477.a2c380fb.chunk.js.map": "/blog/static/js/477.a2c380fb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.199db1cc.css",
-    "static/js/main.a689825c.js"
+    "static/js/main.6ab3012b.js"
   ]
 }
