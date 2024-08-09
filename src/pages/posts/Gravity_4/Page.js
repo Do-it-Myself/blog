@@ -16,10 +16,7 @@ export default function Page(props) {
         Overall, we displayed the chips in a table format and stored the status
         of individual elements in a matrix. Every time a user makes a move, the
         algorithm will iterate through the matrix to check whether there are
-        lines of four forms. I added programs to identify invalid inputs from
-        the players. When the player types multiple letters, symbols, or
-        repeated letters, the program can identify and state that they are
-        invalid.
+        lines of four forms.
       </P>
       <P>
         An interesting result to point out is, since flipping the board causes
