@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/blog/static/css/main.199db1cc.css",
-    "main.js": "/blog/static/js/main.6ab3012b.js",
-    "static/js/477.a2c380fb.chunk.js": "/blog/static/js/477.a2c380fb.chunk.js",
+    "main.js": "/blog/static/js/main.cf0b98eb.js",
+    "static/js/477.fa748a87.chunk.js": "/blog/static/js/477.fa748a87.chunk.js",
     "static/media/Wired.jpg": "/blog/static/media/Wired.c8aa6a9895ad6554fedf.jpg",
     "static/media/Serial.jpg": "/blog/static/media/Serial.983d46c4ec2cf43eb5ac.jpg",
     "static/media/OLED.jpg": "/blog/static/media/OLED.d49ef9b4ace71f9c2c18.jpg",
@@ -16,6 +16,7 @@
     "static/media/Perfboard_circuit.PNG": "/blog/static/media/Perfboard_circuit.f0ef63c93f69f2704117.PNG",
     "static/media/Variable_length.gif": "/blog/static/media/Variable_length.533d38efdd30edc36e1c.gif",
     "static/media/Wireless.jpg": "/blog/static/media/Wireless.0a5cd691cd8d1c5a8ac6.jpg",
+    "static/media/CAD.PNG": "/blog/static/media/CAD.a69295deb263c6509925.PNG",
     "static/media/Perfboard.jpg": "/blog/static/media/Perfboard.d03ad60b54fce282dda1.jpg",
     "static/media/Assembly.jpg": "/blog/static/media/Assembly.8ae5bc6aa14e49106fe5.jpg",
     "static/media/Inter-Bold.ttf": "/blog/static/media/Inter-Bold.88fa7ae373b07b41ecce.ttf",
@@ -28,12 +29,14 @@
     "static/media/Aesthetic_solution.PNG": "/blog/static/media/Aesthetic_solution.5614234697f03a84b47a.PNG",
     "static/media/Using_KwickLine.PNG": "/blog/static/media/Using_KwickLine.8133dcdd7b598215d019.PNG",
     "static/media/Business_model.PNG": "/blog/static/media/Business_model.caa8335617e17827ab07.PNG",
+    "static/media/Code Structure.JPG": "/blog/static/media/Code Structure.434692adf08d486c432c.JPG",
     "static/media/Rough_Dimensions.PNG": "/blog/static/media/Rough_Dimensions.021dcc53a098f00d45b5.PNG",
     "static/media/Debug.jpg": "/blog/static/media/Debug.0df186b89f1560f80d1b.jpg",
     "static/media/Cafe_barrier.PNG": "/blog/static/media/Cafe_barrier.d8258858e61df758194b.PNG",
     "static/media/C-tube.jpeg": "/blog/static/media/C-tube.ca72aa5688caba4b3542.jpeg",
     "static/media/Aesthetic_problem.PNG": "/blog/static/media/Aesthetic_problem.d5c3f0d11b8ba15d563a.PNG",
     "static/media/Schematic.PNG": "/blog/static/media/Schematic.e42267dd84de1745cfb9.PNG",
+    "static/media/Arena.JPG": "/blog/static/media/Arena.2db9a54ee6c1ef705a75.JPG",
     "static/media/OpenFitness.jpg": "/blog/static/media/OpenFitness.4137e99a1e3253ee7d28.jpg",
     "static/media/Hand_2.jpeg": "/blog/static/media/Hand_2.f9d24775a30d208c4bee.jpeg",
     "static/media/Hand_1.jpeg": "/blog/static/media/Hand_1.b87149340e4416408637.jpeg",
@@ -43,6 +46,7 @@
     "static/media/PCB_layout.PNG": "/blog/static/media/PCB_layout.5b28011a100a46eaea10.PNG",
     "static/media/Hand.jpg": "/blog/static/media/Hand.321f1e38f4a086582dd9.jpg",
     "static/media/Customizable.PNG": "/blog/static/media/Customizable.a778d58f218d1155fca7.PNG",
+    "static/media/Line sensor.JPG": "/blog/static/media/Line sensor.b98633a245feab461a93.JPG",
     "static/media/Lock.gif": "/blog/static/media/Lock.ea5e724549e97438f781.gif",
     "static/media/Whole_Assembly_Internal.PNG": "/blog/static/media/Whole_Assembly_Internal.c29410732d0937a222b6.PNG",
     "static/media/Rows_and_columns.PNG": "/blog/static/media/Rows_and_columns.fe2a4234adca2ef819f7.PNG",
@@ -73,11 +77,11 @@
     "static/media/Algorithm.PNG": "/blog/static/media/Algorithm.00335e91c4cbf58cde08.PNG",
     "index.html": "/blog/index.html",
     "main.199db1cc.css.map": "/blog/static/css/main.199db1cc.css.map",
-    "main.6ab3012b.js.map": "/blog/static/js/main.6ab3012b.js.map",
-    "477.a2c380fb.chunk.js.map": "/blog/static/js/477.a2c380fb.chunk.js.map"
+    "main.cf0b98eb.js.map": "/blog/static/js/main.cf0b98eb.js.map",
+    "477.fa748a87.chunk.js.map": "/blog/static/js/477.fa748a87.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.199db1cc.css",
-    "static/js/main.6ab3012b.js"
+    "static/js/main.cf0b98eb.js"
   ]
 }
