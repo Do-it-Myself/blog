@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/blog/static/css/main.199db1cc.css",
-    "main.js": "/blog/static/js/main.cf0b98eb.js",
-    "static/js/477.fa748a87.chunk.js": "/blog/static/js/477.fa748a87.chunk.js",
+    "main.js": "/blog/static/js/main.c41334ec.js",
+    "static/js/477.cd5b3da1.chunk.js": "/blog/static/js/477.cd5b3da1.chunk.js",
     "static/media/Wired.jpg": "/blog/static/media/Wired.c8aa6a9895ad6554fedf.jpg",
     "static/media/Serial.jpg": "/blog/static/media/Serial.983d46c4ec2cf43eb5ac.jpg",
     "static/media/OLED.jpg": "/blog/static/media/OLED.d49ef9b4ace71f9c2c18.jpg",
@@ -77,11 +77,11 @@
     "static/media/Algorithm.PNG": "/blog/static/media/Algorithm.00335e91c4cbf58cde08.PNG",
     "index.html": "/blog/index.html",
     "main.199db1cc.css.map": "/blog/static/css/main.199db1cc.css.map",
-    "main.cf0b98eb.js.map": "/blog/static/js/main.cf0b98eb.js.map",
-    "477.fa748a87.chunk.js.map": "/blog/static/js/477.fa748a87.chunk.js.map"
+    "main.c41334ec.js.map": "/blog/static/js/main.c41334ec.js.map",
+    "477.cd5b3da1.chunk.js.map": "/blog/static/js/477.cd5b3da1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.199db1cc.css",
-    "static/js/main.cf0b98eb.js"
+    "static/js/main.c41334ec.js"
   ]
 }
